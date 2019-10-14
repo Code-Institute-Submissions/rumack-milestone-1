@@ -1,0 +1,65 @@
+// KEYFRAMES
+
+// Keyframe animation for background image and nav bar
+
+@keyframes bg-fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// Keyframes for each individual letter path with stroke-dashoffset setting
+
+// Keyframes for 'bettina marten' - through mixins in "abstracts/_mixins"
+@include path-animation-speed-1(write-1, 398, $color-black); 
+@include path-animation-speed-1(write-2, 334, $color-black);
+@include path-animation-speed-1(write-3, 246, $color-black);
+@include path-animation-speed-1(write-4, 246, $color-black);
+@include path-animation-speed-1(write-5, 135, $color-black);
+@include path-animation-speed-1(write-6, 47, $color-black);
+@include path-animation-speed-1(write-7, 306, $color-black);
+@include path-animation-speed-1(write-8, 336, $color-black);
+@include path-animation-speed-2(write-9, 467, $color-black);
+@include path-animation-speed-2(write-10, 336, $color-black);
+@include path-animation-speed-2(write-11, 184, $color-black);
+@include path-animation-speed-2(write-12, 246, $color-black);
+@include path-animation-speed-2(write-13, 334, $color-black);
+@include path-animation-speed-2(write-14, 306, $color-black);
+// Keyframes for 'landscape' - through mixins in "abstracts/_mixins"
+@include path-animation-speed-3(write-15, 121, $color-primary);
+@include path-animation-speed-3(write-16, 199, $color-primary);
+@include path-animation-speed-3(write-17, 239, $color-primary);
+@include path-animation-speed-3(write-18, 214, $color-primary);
+@include path-animation-speed-3(write-19, 156, $color-primary);
+@include path-animation-speed-3(write-20, 158, $color-primary);
+@include path-animation-speed-3(write-21, 199, $color-primary);
+@include path-animation-speed-3(write-22, 165, $color-primary);
+@include path-animation-speed-3(write-23, 183, $color-primary);
+// Keyframes for 'architecture' - through mixins in "abstracts/_mixins"
+@include path-animation-speed-4(write-24, 168, $color-grey);
+@include path-animation-speed-4(write-25, 92, $color-grey);
+@include path-animation-speed-4(write-26, 112, $color-grey);
+@include path-animation-speed-4(write-27, 179, $color-grey);
+@include path-animation-speed-4(write-28, 67, $color-grey);
+@include path-animation-speed-4(write-29, 24, $color-grey);
+@include path-animation-speed-4(write-30, 123, $color-grey);
+@include path-animation-speed-4(write-31, 167, $color-grey);
+@include path-animation-speed-4(write-32, 112, $color-grey);
+@include path-animation-speed-4(write-33, 123, $color-grey);
+@include path-animation-speed-4(write-34, 153, $color-grey);
+@include path-animation-speed-4(write-35, 92, $color-grey);
+@include path-animation-speed-4(write-36, 167, $color-grey);

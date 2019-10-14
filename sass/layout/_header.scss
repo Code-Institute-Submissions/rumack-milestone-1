@@ -1,0 +1,272 @@
+.header {
+    
+    display: grid;
+    grid-template-columns: minmax(5rem, 1fr) 10fr minmax(5rem, 1fr);
+    grid-template-rows: 4rem 8fr;
+    row-gap: 14rem;
+    overflow: hidden;
+
+    position: relative;
+
+    &__bg {
+        width: 100%;
+        background-image: linear-gradient(to top left, rgba($color-white, .2), rgba($color-white, .95)), url(img/img-header-flipped.jpg); 
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        animation: fade-in 1.5s linear 2.5s forwards;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    &__nav {
+        // grid-column: 1 / -1;
+        // grid-row: 1 / span 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4.5%;
+        background-image: linear-gradient(to right, rgba($color-black, .8), rgba($color-black, .6));
+        background-size: cover;
+        justify-self: center;
+        opacity: 0;
+        animation: fade-in 1.5s linear 2.5s forwards;
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+
+       
+
+        &-list {
+            height: 100%;
+            max-width: 120rem;
+            min-width: 90rem;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        &-item {
+            display: grid;
+            align-items: center;
+            transition: all .5s;
+
+            &:hover,
+            &:active {
+                background-color: rgba($color-white, .6);
+            }
+
+            &:hover > .header__nav-link {
+                color: $color-black;
+            }
+        }
+
+        &-link:link,
+        &-link:visited {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: $color-white;
+            letter-spacing: 1.5px;
+            padding: 0 1.5rem;
+            transition: all .5s;
+        }
+    }
+
+    
+    &__main {
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+        column-gap: 8rem;
+        row-gap: 1rem;
+        z-index: 1;
+    }
+
+    &__logo-box {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        max-width: 45rem;  // **** WILL NEED ADJUSTING WITH MEDIA QUERY FOR MOBILE ****
+        width: 100%;   
+        height:100%;
+    }
+
+    &__logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__social {
+        width: 60%;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        align-self: start;
+        animation: fade-in 1.5s linear 2s forwards;
+        opacity: 0;
+    }
+
+    // All paths
+    .path {
+        fill: none;
+        stroke-width: 2;
+    }
+
+    // Paths individually to set stroke colour, stroke-dasharray and corresponding animation
+    .path-1 {
+        @include path-properties($color-black, 398, write-1);
+    }
+
+    .path-2 {
+        @include path-properties($color-black, 334, write-2);
+    }
+
+    .path-3 {
+        @include path-properties($color-black, 246, write-3);
+    }
+
+    .path-4 {
+        @include path-properties($color-black, 246, write-4);
+    }
+
+    .path-5 {
+        @include path-properties($color-black, 135, write-5);
+    }
+
+    .path-6 {
+        @include path-properties($color-black, 47, write-6);
+    }
+
+    .path-7 {
+        @include path-properties($color-black, 306, write-7);
+    }
+
+    .path-8 {
+        @include path-properties($color-black, 336, write-8);
+    }
+
+    .path-9 {
+        @include path-properties($color-black, 466, write-9);
+    }
+
+    .path-10 {
+        @include path-properties($color-black, 336, write-10);
+    }
+
+    .path-11 {
+        @include path-properties($color-black, 184, write-11);
+    }
+
+    .path-12 {
+        @include path-properties($color-black, 246, write-12);
+    }
+
+    .path-13 {
+        @include path-properties($color-black, 334, write-13);
+    }
+
+    .path-14 {
+        @include path-properties($color-black, 306, write-14);
+    }
+
+    .path-15 {
+        @include path-properties($color-primary, 121, write-15);
+    }
+
+    .path-16 {
+        @include path-properties($color-primary, 199, write-16);
+    }
+
+    .path-17 {
+        @include path-properties($color-primary, 239, write-17);
+    }
+
+    .path-18 {
+        @include path-properties($color-primary, 214, write-18);
+    }
+
+    .path-19 {
+        @include path-properties($color-primary, 156, write-19);
+    }
+
+    .path-20 {
+        @include path-properties($color-primary, 158, write-20);
+    }
+
+    .path-21 {
+        @include path-properties($color-primary, 199, write-21);
+    }
+
+    .path-22 {
+        @include path-properties($color-primary, 165, write-22);
+    }
+
+    .path-23 {
+        @include path-properties($color-primary, 183, write-23);
+    }
+
+    .path-24 {
+        @include path-properties($color-grey, 168, write-24);
+    }
+
+    .path-25 {
+        @include path-properties($color-grey, 92, write-25);
+    }
+
+    .path-26 {
+        @include path-properties($color-grey, 112, write-26);
+    }
+
+    .path-27 {
+        @include path-properties($color-grey, 179, write-27);
+    }
+
+    .path-28 {
+        @include path-properties($color-grey, 67, write-28);
+    }
+
+    .path-29 {
+        @include path-properties($color-grey, 24, write-29);
+    }
+
+    .path-30 {
+        @include path-properties($color-grey, 123, write-30);
+    }
+
+    .path-31 {
+        @include path-properties($color-grey, 167, write-31);
+    }
+
+    .path-32 {
+        @include path-properties($color-grey, 112, write-32);
+    }
+
+    .path-33 {
+        @include path-properties($color-grey, 123, write-33);
+    }
+
+    .path-34 {
+        @include path-properties($color-grey, 153, write-34);
+    }
+
+    .path-35 {
+        @include path-properties($color-grey, 92, write-35);
+    }
+
+    .path-36 {
+        @include path-properties($color-grey, 167, write-36);
+    }
+}
+
+
+   
+
+
+

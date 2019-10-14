@@ -1,0 +1,26 @@
+.portfolio {
+    display: grid;
+    grid-template-columns: minmax(5rem, .5fr) 9fr minmax(5rem, .5fr);
+    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+    row-gap: 1rem;
+
+    &__intro {
+        width: 100%;
+        opacity: 0;
+        animation: fade-in 1.5s linear 2s forwards;
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+
+        display: grid;
+        grid-template-rows: 2fr;
+        justify-items: center;
+        align-items: start;
+        row-gap: 1rem;
+    }
+
+    &__gallery {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+}

@@ -1,0 +1,105 @@
+
+// SVG path class properties
+
+@mixin path-properties($stroke-color, $dash-array, $animation-name) {
+    stroke: $stroke-color;
+    stroke-dasharray: $dash-array;
+    animation: $animation-name $path-animation-duration linear forwards;
+}
+
+// SVG path keyframe animation mixins
+
+@mixin path-animation-speed-1($name, $dash-offset, $fill-color) {
+    @keyframes #{$name} {
+        0% {
+            stroke-dashoffset: $dash-offset;
+        }
+        20% {
+            stroke-dashoffset: 0;
+        }
+        30% {
+            fill: transparent;
+            
+        }
+        100% {
+            stroke: transparent;
+            fill: $fill-color;
+        }
+    }
+}
+
+@mixin path-animation-speed-2($name, $dash-offset, $fill-color) {
+    @keyframes #{$name} {
+        0% {
+            stroke-dashoffset: $dash-offset;
+        }
+        30% {
+            stroke-dashoffset: 0;
+        }
+        40% {
+            fill: transparent;
+            
+        }
+        100% {
+            stroke: transparent;
+            fill: $fill-color;
+        }
+    }
+}
+
+@mixin path-animation-speed-3($name, $dash-offset, $fill-color) {
+    @keyframes #{$name} {
+        0% {
+            stroke-dashoffset: $dash-offset;
+        }
+        40% {
+            stroke-dashoffset: 0;
+        }
+        50% {
+            fill: transparent;
+        }
+        100% {
+            stroke: transparent;
+            fill: $fill-color;
+        }
+    }
+}
+
+@mixin path-animation-speed-4($name, $dash-offset, $fill-color) {
+    @keyframes #{$name} {
+        0% {
+            stroke-dashoffset: $dash-offset;
+        }
+        50% {
+            stroke-dashoffset: 0;
+        }
+        60% {
+            fill: transparent;
+        }
+        100% {
+            stroke: transparent;
+            fill: $fill-color;
+        }
+    }
+}
+
+@mixin path-animation-speed-5($name, $dash-offset, $fill-color) {
+    @keyframes #{$name} {
+        0% {
+            stroke-dashoffset: $dash-offset;
+        }
+        60% {
+            stroke-dashoffset: 0;
+        }
+        70% {
+            fill: transparent;
+        }
+        100% {
+            stroke: transparent;
+            fill: $fill-color;
+        }
+    }
+}
+
+
+

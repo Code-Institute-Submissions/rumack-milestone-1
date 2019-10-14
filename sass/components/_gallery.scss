@@ -1,0 +1,384 @@
+.gallery {
+    margin: 6rem auto;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+    
+
+    // &__icon {
+    //     fill: $color-black;
+    //     width: 4rem;
+    //     height: 4rem;
+    //     z-index: 1;
+    // }
+    
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: 0 10px 6px -10px rgba($color-black, .5);
+        //transform: scale(1.01);
+        transition: all .5s;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        &::after {
+            //font-family: "Lato", sans-serif;
+            line-height: 1.6;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: $color-white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            // top: 0;
+            // right: 0;
+            
+            height: 100%;
+            width: 100%;
+            padding: 1rem;
+            opacity: 0;
+            //visibility: hidden;
+            backface-visibility: hidden;
+            transition: all .7s;
+        }
+//dsfsdsdf
+        &:hover::after {
+            opacity: 1;
+            //visibility: visible;
+            // height: 50%;
+            // width: 100%;
+        }
+
+        &:hover > .gallery__img {
+            //transform: scale(1);
+            box-shadow: 0 8px 5px -10px rgba($color-black, .5);
+        }
+    }
+
+    &__link--1 {
+
+        &::after {
+            content: "qsdqs qsd qsd  qs qsd qsd qs sq qs";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+
+    &__link--2 {
+
+        &::after {
+            content: "sdln sd ncdljkndfgn dfgndfkjnf sdkjgn dsn fkj dfkjg df ";
+            background-color: rgba($color-primary, 0.99);
+        }
+    }
+
+    &__link--3 {
+
+        &::after {
+            content: "dfgkjk jgdf jgdfjgdgdj hltk ";
+            background-color: rgba($color-grey, 0.99);
+        }
+    }
+
+    &__link--4 {
+
+        &::after {
+            content: "eroitoerit ue rrot eori oier reo itu rei ";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+
+    &__link--5 {
+
+        &::after {
+            content: "l kjer kl lk lk  lkjr k rlrk jrlkjerkjerkl";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+
+    &__link--6 {
+
+        &::after {
+            content: "wxc c  w xwc wxowiox opixwjc xw cxw ";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+
+    &__link--7 {
+
+        &::after {
+            content: "azkza za azzozoa dopa zpoza poza zpo";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+
+    &__link--8 {
+
+        &::after {
+            content: "zieu i   ezieu uiz fiu fhuf hz";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+
+    &__link--9 {
+
+        &::after {
+            content: "uizaueh ueazueh zaui htrugrepioug eghruihtg urt trurt";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+
+    &__link--10 {
+
+        &::after {
+            content: "q sdsj dhizea disz dij idjzeio ei";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+
+    &__link--11 {
+
+        &::after {
+            content: "qsdqs qsd qsd  qs qsd qsd qs sq qs";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+
+    &__link--12 {
+
+        &::after {
+            content: "qsdqs qsd qsd  qs qsd qsd qs sq qs";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+
+    &__link--13 {
+
+        &::after {
+            content: "qsdqs qsd qsd  qs qsd qsd qs sq qs";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+
+    &__link--14 {
+
+        &::after {
+            content: "qsdqs qsd qsd  qs qsd qsd qs sq qs";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+
+    &__link--15 {
+
+        &::after {
+            content: "qsdqs qsd qsd  qs qsd qsd qs sq qs";
+            background-color: rgba($color-black, 0.99);
+        }
+    }
+}
+
+// ALBUM STYLING
+
+.album {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(black, 0.94);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-columns: repeat(12, 1fr);
+        // grid-template-columns: repeat(11, minmax(10rem, 1fr));
+        justify-content: center;
+        grid-column-gap: 1rem;
+    }
+
+    &__close:link,
+    &__close:visited {
+        grid-row: 1 / span 1;
+        grid-column: 11 / span 1;
+        background-color: rgba($color-black, 0.0);
+        color: $color-white;
+        line-height: 1;
+        font-size: 3rem;
+        font-weight: 400;
+        align-self: flex-end;
+        font-size: 3rem;
+        text-decoration: none;
+        transition: all .2s;
+    }
+
+    &__close:hover {
+        border: 1px solid $color-white;
+    }
+
+    &__display {
+        grid-row: 2 / 9;
+        grid-column: 4 / span 6;
+        border: 1rem solid $color-white;
+        
+        border-radius: .2rem;
+    }
+
+    &__thumbnail {
+        grid-row: 10 / 11;
+        background-color: rgba($color-white, 0.0);
+        cursor: pointer;
+        z-index: 20; 
+    }
+
+    &__thumbnail-1 {
+        grid-column: 4 / span 1;
+    }
+
+    &__thumbnail-2 {
+        grid-column: 5 / span 1;
+    }
+
+    &__thumbnail-3 {
+        grid-column: 6 / span 1;
+    }
+
+    &__thumbnail-4 {
+        grid-column: 7 / span 1;
+    }
+
+    &__thumbnail-5 {
+        grid-column: 8 / span 1;
+    }
+
+    &__thumbnail-6 {
+        grid-column: 9 / span 1;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+        transition: all .3s;
+
+    }
+
+    &__img--small {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: 0 10px 6px -10px rgba($color-grey, .5);
+        border-bottom: 1px solid transparent;
+        
+        transition: all .3s;
+
+        &:hover {
+            filter: brightness(130%);       
+        }
+    }
+
+    &__radio {
+       display: none;
+    }
+
+    // FOLDER ONE
+
+    // Radio buttton actions - show appropriate display image
+
+    &__bg > &__radio--1:checked ~ &__display > &__img:nth-child(1) {
+        animation: fade-in 1s;
+        display: block;
+    }  
+
+    &__bg > &__radio--2:checked ~ &__display > &__img:nth-child(2) {
+        animation: fade-in 1s;
+        display: block;
+    }
+
+    &__bg > &__radio--3:checked ~ &__display > &__img:nth-child(3) {
+        animation: fade-in 1s;
+        display: block;
+    }
+
+    &__bg > &__radio--4:checked ~ &__display > &__img:nth-child(4) {
+        animation: fade-in 1s;
+        display: block;
+    }
+
+    &__bg > &__radio--5:checked ~ &__display > &__img:nth-child(5) {
+        animation: fade-in 1s;
+        display: block;
+    }
+
+    &__bg > &__radio--6:checked ~ &__display > &__img:nth-child(6) {
+        animation: fade-in 1s;
+        display: block;
+    }
+
+    // Radio-buttton actions - scale, darken and adjust box-shadow of active thumbnail image
+
+    &__bg > &__radio--1:checked + label > img {
+        transform: scale(0.8);
+        box-shadow: 0 6px 5px -10px rgba($color-grey, .5);
+        filter: brightness(90%);
+    }  
+
+    &__bg > &__radio--2:checked + label > img {
+        transform: scale(0.9);
+        box-shadow: 0 6px 5px -10px rgba($color-grey, .5);
+        filter: brightness(90%);
+    }  
+
+    &__bg > &__radio--3:checked + label > img {
+        transform: scale(0.9);
+        box-shadow: 0 6px 5px -10px rgba($color-grey, .5);
+        filter: brightness(90%);
+    }  
+
+    &__bg > &__radio--4:checked + label > img {
+        transform: scale(0.9);
+        box-shadow: 0 6px 5px -10px rgba($color-grey, .5);
+        filter: brightness(90%);
+    }  
+
+    &__bg > &__radio--5:checked + label > img {
+        transform: scale(0.9);
+        box-shadow: 0 6px 5px -10px rgba($color-grey, .5);
+        filter: brightness(90%);
+    } 
+    
+    &__bg > &__radio--6:checked + label > img {
+        transform: scale(0.9);
+        box-shadow: 0 6px 5px -10px rgba($color-grey, .5);
+        filter: brightness(90%);
+    } 
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
