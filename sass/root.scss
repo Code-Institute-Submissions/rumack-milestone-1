@@ -8,10 +8,17 @@
 @import "components/gallery";
 @import "components/social";
 
+@import "layout/about";
 @import "layout/contact";
+@import "layout/design";
 @import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/portfolio";
 
+
+
+@import "scss/fontawesome.scss";
+@import "scss/brands.scss";
+@import "scss/solid.scss";

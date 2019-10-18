@@ -70,7 +70,6 @@
         z-index: 5;
     } 
 
-
     &__list {
         grid-row: 3 / span 5;
         grid-column: 4 / 7;
@@ -78,8 +77,6 @@
         display: grid;
         justify-items: center;
         grid-row-gap: 1rem;
-        
-       
     }
 
     &__link:link,

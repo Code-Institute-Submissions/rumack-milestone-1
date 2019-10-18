@@ -1,7 +1,11 @@
+.nav__icon {
+    color: $color-black;
+}
+
 .header {
-    
+    width: 100%;
     display: grid;
-    grid-template-columns: minmax(5rem, 1fr) 10fr minmax(5rem, 1fr);
+    grid-template-columns: minmax(5rem, .5fr) 10fr minmax(5rem, .5fr);
     grid-template-rows: 4rem 8fr;
     row-gap: 14rem;
     overflow: hidden;
@@ -10,9 +14,10 @@
 
     &__bg {
         width: 100%;
-        background-image: linear-gradient(to top left, rgba($color-white, .2), rgba($color-white, .95)), url(img/img-header-flipped.jpg); 
+        // background-image: linear-gradient(to top left, rgba($color-white, .2), rgba($color-white, .95)), url(img/img-header-flipped.jpg); 
+        background-image: radial-gradient(rgba($color-white, .9), rgba($color-white, .4)), url(img/img-header-flipped.jpg);
         background-size: cover;
-        background-position: center;
+        background-position: center left;
         background-attachment: fixed;
         grid-column: 1 / -1;
         grid-row: 1 / -1;
@@ -22,31 +27,29 @@
     }
 
     &__nav {
-        // grid-column: 1 / -1;
-        // grid-row: 1 / span 1;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 4.5%;
-        background-image: linear-gradient(to right, rgba($color-black, .8), rgba($color-black, .6));
+        height: 3%;
+        background-image: linear-gradient(to right, rgba($color-white, .8), rgba($color-white, .6));
         background-size: cover;
         justify-self: center;
         opacity: 0;
         animation: fade-in 1.5s linear 2.5s forwards;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         z-index: 2;
 
        
 
         &-list {
             height: 100%;
-            max-width: 120rem;
-            min-width: 90rem;
+            // max-width: 120rem;
+            // min-width: 90rem;
             list-style: none;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: flex-start;
         }
 
         &-item {
@@ -56,11 +59,19 @@
 
             &:hover,
             &:active {
-                background-color: rgba($color-white, .6);
+                background-color: rgba($color-black, .6);
             }
 
             &:hover > .header__nav-link {
-                color: $color-black;
+                color: $color-white;
+            }
+
+            &:first-child {
+                margin-left: 5rem;
+            }
+
+            &:not(first-child) {
+                margin-left: 1rem;
             }
         }
 
@@ -68,11 +79,49 @@
         &-link:visited {
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: $color-white;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: $color-black;
             letter-spacing: 1.5px;
             padding: 0 1.5rem;
+            transition: all .5s;
+        }
+    }
+
+    &__social {
+        width: 15rem;
+        display: flex;
+        //align-items: center;
+        //justify-content: space-around;
+
+        &-list {
+            width: 100%;
+            margin-right: 3rem;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &-item {
+            //font-size: 1.8rem;
+            color: $color-black;
+            //padding: 0 1.5rem;
+            transition: all .5s;
+
+            &:hover {
+                background-color: rgba($color-black, .6);
+            }
+
+            &:hover .header__social-icon {
+                color: $color-white;
+            }
+        }
+
+        &-icon {
+            font-size: 1.8rem;
+            color: $color-black;
+            padding: .8rem 1.5rem;
+            font-weight: 100;
             transition: all .5s;
         }
     }
@@ -92,34 +141,37 @@
     }
 
     &__logo-box {
-        grid-column: 1 / span 1;
+        grid-column: 1 / span 2;
         grid-row: 2 / span 1;
+        justify-self: center;
         max-width: 45rem;  // **** WILL NEED ADJUSTING WITH MEDIA QUERY FOR MOBILE ****
         width: 100%;   
         height:100%;
+        //background-image: radial-gradient(farthest-corner, rgba($color-white, .8), transparent);
     }
 
     &__logo {
         width: 100%;
         height: 100%;
+        padding: 2rem;
     }
 
-    &__social {
-        width: 60%;
-        grid-column: 1 / span 1;
-        grid-row: 3 / span 1;
-        align-self: start;
-        animation: fade-in 1.5s linear 2s forwards;
-        opacity: 0;
-    }
+    // &__social {
+    //     width: 60%;
+    //     grid-column: 1 / span 1;
+    //     grid-row: 3 / span 1;
+    //     align-self: start;
+    //     animation: fade-in 1.5s linear 2s forwards;
+    //     opacity: 0;
+    // }
 
-    // All paths
+    // All logo SVG paths
     .path {
         fill: none;
         stroke-width: 2;
     }
 
-    // Paths individually to set stroke colour, stroke-dasharray and corresponding animation
+    // Logo SVG paths individually to set stroke colour, stroke-dasharray and corresponding animation
     .path-1 {
         @include path-properties($color-black, 398, write-1);
     }

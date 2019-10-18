@@ -1,4 +1,4 @@
-// CSS reset
+// **** CSS reset ****
 
 *,
 *::before,
@@ -19,45 +19,53 @@ body {
     font-weight: 400;
     line-height: 1.7; 
     color: $color-black;
-
-    // display: grid;
-    // justify-items: center;
 }
 
-// Sections formatting
+[required] {               // In Firefox, this removes the red box-shadow from required inputs
+    box-shadow: none;
+}
+
+// **** Sections formatting ****
 
 section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
 }
 
-// Typography
+// **** Typography ****
 
 .heading--secondary {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    font-weight: 300;
     text-transform: uppercase;
     color: $color-black;
-    line-height: 1.2;
+    line-height: 1.6;
     letter-spacing: 4px;
-    padding: 3rem;
+    padding: 0 2rem;
 
     span {
         color: $color-primary;
         text-transform: lowercase;
-        text-align: center;
     }
 }
 
-.paragraph {
-    width: 60%;
-    font-size: 1.8rem;
-    letter-spacing: .8px;
+.heading--tertiary {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
     font-weight: 300;
     text-align: center;
+    padding: 0 2rem;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: justify;
+    letter-spacing: 1px;
 }
 
 
-// In Firefox, this removes the red box-shadow from required inputs
-[required] {
-    box-shadow: none;
-}
+
+

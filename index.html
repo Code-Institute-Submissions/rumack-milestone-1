@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap" rel="stylesheet">
+        <link href="css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <title>Bettina Marten</title>
     </head>
     <body>
-        
+<!-- **** Pop-up nav for mobile **** -->
         <div class="layout-grid">
-            <div class="navigation">
+            <!-- <div class="navigation">
                 <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
                 <label for="nav-toggle" class="navigation__button">
                     <span class="navigation__icon">&nbsp;</span>
@@ -25,22 +26,29 @@
                         <li class="navigation__item"><a href="#contact" class="navigation__link">Contact</a></li>
                     </ul>  
                 </nav>
-            </div>
+            </div> -->
             <header class="header">
                 <div class="header__bg"></div>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item"><a href="#" class="header__nav-link">Home</a></li>
-                        <li class="header__nav-item"><a href="#" class="header__nav-link">About</a></li>
+                        <!-- <li class="header__nav-item"><a href="#" class="header__nav-link">About</a></li> -->
                         <li class="header__nav-item"><a href="#" class="header__nav-link">Services</a></li>
+                        <!-- <li class="header__nav-item"><a href="#design" class="header__nav-link">Design</a></li> -->
                         <li class="header__nav-item"><a href="#portfolio" class="header__nav-link">Portfolio</a></li>
                         <li class="header__nav-item"><a href="#contact" class="header__nav-link">Contact</a></li>
                     </ul>  
+                    <div class="header__social">
+                        <ul class="header__social-list">
+                            <li class="header__social-item"><a href="#" class="header__social-link"><i class="fab fa-facebook-f header__social-icon"></i></a></li>
+                            <li class="header__social-item"><a href="#" class="header__social-link"><i class="fab fa-instagram header__social-icon"></i></a></li>
+                            <li class="header__social-item"><a href="#" class="header__social-link"><i class="fab fa-linkedin-in header__social-icon"></i></a></li>
+                        </ul>
+                    </div>
                 </nav>
-                <!-- width="1030.1" height="106" -->
                 <div class="header__main">
                     <div class="header__logo-box">
-                        <!-- To make the animation work, the SVG paths must be treated as part of the DOM, so the file must be treated inline as part of the HTML-->
+                        <!-- To make the line animation work, the SVG paths must be targeted (through classes) as part of the DOM, so the file must be treated inline as part of the HTML-->
                         <svg class="header__logo"  version="1.1" viewBox="0 0 272.53 52.355" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                             <g transform="translate(32.722 -68.983)">
                                 <g transform="matrix(.35278 0 0 -.35278 -45.95 200.16)">
@@ -92,50 +100,77 @@
                             </g>
                         </svg>
                     </div> 
-                    <div class="social header__social">
-                        <a href="#" class="social__link">
-                            <svg class="social__icon">
-                                    <use xlink:href="css/img/sprite.svg#icon-mobile"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="social__link">
-                            <svg class="social__icon">
-                                    <use xlink:href="css/img/sprite.svg#icon-mail"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="social__link">
-                            <svg class="social__icon">
-                                    <use xlink:href="css/img/sprite.svg#icon-facebook2"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="social__link">
-                            <svg class="social__icon">
-                                    <use xlink:href="css/img/sprite.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="social__link">
-                            <svg class="social__icon">
-                                    <use xlink:href="css/img/sprite.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </div> 
                 </div>
             </header>
-                <!-- <div class="section-intro">
-                    <div class="section-intro__text">
-                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae natus doloribus blanditiis, eveniet cumque magni similique aut tempore eius ab ut explicabo. Doloremque aut perspiciatis nisi aperiam qui reprehenderit delectus.</p>
-                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti similique veniam provident aliquam ad eos, consequatur dolore officiis sequi reprehenderit itaque, aliquid autem molestiae sint earum reiciendis asperiores exercitationem iusto quos incidunt nostrum suscipit assumenda? Facilis, error velit molestias!</p>
-                    </div>   
-                    <div class="section-intro__img-box">
-                        <img src="css/img/garden-design-3.jpg" alt="Hand-drawn design" class="section-intro__img">
+            
+            <section class="about">
+                <div class="about__heading">
+                    <h2 class="heading--secondary">About<span> us</span></h2> 
+                </div>
+                <div class="about__content">
+                    <div class="about__lead">
+                        <p class="heading--tertiary">
+                            I'm Bettina Marten, a landcape architect with twenty years of experience working in the Barcelona region. I undertake all manner of projects: gardens in private homes, public parks, municipal spaces or commercial premises, managing everything from the design stage through to implementation and maintenance.
+                        </p>
                     </div>
-                     
-                </div> -->
+                    
+                    <div class="about__photo-box">
+                        <div class="about__photo-frame">
+                            <div class="copy-border copy-border-top">&nbsp;</div>
+                            <div class="copy-border copy-border-bottom">&nbsp;</div>
+                            <div class="copy-border copy-border-left">&nbsp;</div>
+                            <div class="copy-border copy-border-right">&nbsp;</div>
+                            <img src="css/img/about__bettina_img.jpg" alt="" class="about__photo-img"> 
+                        </div>
+                    </div>
+                    <div class="about__copy">
+                        <p class="about__paragraph paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, incidunt. Quis aperiam commod.</p>
+                        <p class="about__paragraph paragraph">Suspendisse id consectetur lacus. Curabitur elementum varius lectus quis ultrices. Donec mattis nulla eget enim suscipit tempor. Sit amet consectetur adipisicing elit. Alias minima odit exercitationem magni quae beatae et, adipisci quasi dolorum nesciunt?</p>
+                        <p class="about__paragraph paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias minima odit exercitationem magni quae beatae.</p>
+                        <p class="about__paragraph paragraph">Aliquam sed bibendum leo, eu pellentesque elit. Curabitur lorem orci, vestibulum non scelerisque ut, finibus et est. Sed tempor dignissim nisi, et feugiat sapien rutrum ac. Maecenas fermentum fermentum eros in egestas. Praesent at turpis sit amet nibh consequat lacinia ut ac enim.</p>
+                        <div class="about__photo-box about__photo-trans">
+                            <div class="about__photo-frame">
+                                <div class="copy-border copy-border-top">&nbsp;</div>
+                                <div class="copy-border copy-border-bottom">&nbsp;</div>
+                                <div class="copy-border copy-border-left">&nbsp;</div>
+                                <div class="copy-border copy-border-right">&nbsp;</div>
+                                <img src="css/img/about__team.jpg" alt="" class="about__photo-img"> 
+                            </div>
+                        </div> 
+                        <p class="about__paragraph about__paragraph--5 paragraph">Quisque a erat interdum, fringilla magna eu, cursus urna. Ut lobortis imperdiet enim eget vestibulum. Quisque ac semper quam. Etiam dignissim enim vel elementum tristique. Sed sed rutrum mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                        <p class="about__paragraph paragraph">Curabitur a mollis libero. Cras congue a tellus vel interdum. Integer tempor arcu odio, et pulvinar lacus laoreet sed. Vestibulum ante ipsum primis in faucibus.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="design" id="design">
+                <div class="design__intro">
+                    <h2 class="heading--secondary"><span>design</span> philosophy</h2>
+                    <p class="heading--tertiary">La calidad del diseño influencia nuestras vidas. Nuestro esfuerzo se dirige a obtener un buen resultado estético y funcional que logramos con nuestra experiencia.</p>
+                </div>
+                <div class="design__content">
+                    <div class="design__img-box">
+                        <img src="css/img/design-2.jpg" alt="" class="design__img design__img-1">
+                    </div>
+                    <div class="design__copy-box">
+                        <div class="design__copy">
+                            <div class="copy-border copy-border-top">&nbsp;</div>
+                            <div class="copy-border copy-border-bottom">&nbsp;</div>
+                            <div class="copy-border copy-border-left">&nbsp;</div>
+                            <div class="copy-border copy-border-right">&nbsp;</div>
+                            <p class="design__paragraph paragraph">La manera de proyectar es mediante un encuentro consistente y filosófico con la obra, no un estilo predeterminado.</p>
+                            <p class="design__paragraph paragraph">Nuestras obras están íntimamente conectadas a su contexto y función. </p>
+                            <p class="design__paragraph paragraph">El resultado es una síntesis de concepto, integración de lo funcional y belleza.</p>
+                            <p class="design__paragraph paragraph">Procuramos que la obra de buena respuesta a su medio, y sea de carácter sostenible para que perdure en el tiempo su valor inicial.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section class="portfolio" id="portfolio">
                 <div class="portfolio__intro">
                     <h2 class="heading--secondary"><span>my</span> portfolio</h2>
-                    <p class="paragraph">See some examples of my work in the gallery below.</p>
+                    <p class="heading--tertiary">See some examples of my work in the gallery below.</p>
                 </div>
                 <div class="portfolio__gallery gallery">
                     <a href="#album--1" class="gallery__link gallery__link--1"><img src="css/img/album-1--1.jpg" alt="" class="gallery__img gallery__img--1"></a>
@@ -154,7 +189,7 @@
             <section class="contact" id="contact">
                 <div class="contact__intro">
                     <h2 class="heading--secondary">Contact <span>me</span></h2>
-                    <p class="paragraph">Please don't hesitate to get in contact if you'd like to know more about my work or if you'd like some advice about a project of your own.</p>
+                    <p class="heading--tertiary">Please don't hesitate to get in contact if you'd like to know more about my work or if you'd like some advice about a project of your own.</p>
                 </div>
                 <div class="social contact__social">
                     <a href="#" class="social__link">
@@ -216,7 +251,6 @@
                     <div class="footer__logo-box">
                             <img src="css/img/footer_logo2.png" class="footer__logo logo">
                     </div>
-                    <!-- <p class="footer__email">info@bettinamarten.com</p> -->
                     <div class="social footer__social">
                         <a href="#" class="social__link">
                             <svg class="social__icon">

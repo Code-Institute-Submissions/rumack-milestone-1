@@ -1,7 +1,4 @@
 .layout-grid {
     display: grid;
-    grid-template-rows: 100vh repeat(3, auto);
-    // outline: .3rem solid #92A763;
-    // outline-offset: -2rem;
-    //row-gap: 20rem;
+    grid-template-rows: 100vh repeat(6, auto);
 }
