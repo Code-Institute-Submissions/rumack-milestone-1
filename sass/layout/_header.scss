@@ -39,6 +39,7 @@
         animation: fade-in 1.5s linear 2.5s forwards;
         display: flex;
         justify-content: space-between;
+        //align-items: center;
         z-index: 2;
 
        
@@ -49,7 +50,7 @@
             // min-width: 90rem;
             list-style: none;
             display: flex;
-            justify-content: flex-start;
+            //justify-content: flex-start;
         }
 
         &-item {
@@ -70,9 +71,9 @@
                 margin-left: 5rem;
             }
 
-            &:not(first-child) {
-                margin-left: 1rem;
-            }
+            // &:not(first-child) {
+            //     margin-left: 1rem;
+            // }
         }
 
         &-link:link,
@@ -88,42 +89,8 @@
         }
     }
 
-    &__social {
-        width: 15rem;
-        display: flex;
-        //align-items: center;
-        //justify-content: space-around;
-
-        &-list {
-            width: 100%;
-            margin-right: 3rem;
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        &-item {
-            //font-size: 1.8rem;
-            color: $color-black;
-            //padding: 0 1.5rem;
-            transition: all .5s;
-
-            &:hover {
-                background-color: rgba($color-black, .6);
-            }
-
-            &:hover .header__social-icon {
-                color: $color-white;
-            }
-        }
-
-        &-icon {
-            font-size: 1.8rem;
-            color: $color-black;
-            padding: .8rem 1.5rem;
-            font-weight: 100;
-            transition: all .5s;
-        }
+    & .social__icon {
+        font-size: 1.6rem;
     }
 
     

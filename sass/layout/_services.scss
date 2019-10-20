@@ -1,0 +1,139 @@
+.services {
+	display: grid;
+	grid-template-columns: minmax(5rem, .5fr) 9fr minmax(5rem, .5fr);
+    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+    row-gap: 7rem;
+    background-color: $color-white;
+    padding-bottom: 25rem;
+
+    &__intro {
+    	grid-row: 1 / span 1;
+ 		grid-column: 2 / span 1;
+ 		width: 70%;
+		// Flex generally the better choice for one-dimensional grids but Grid is the better choice here (and it seems to be the case quite often), because of the 'gap' property. When gap has wider implementation in Flex, then Flex would become an option again.
+ 		display: grid;
+ 		justify-items: center;
+ 		grid-row-gap: 4rem;
+    }
+
+    &__content {
+    	grid-row: 2 / span 1;
+    	grid-column: 2 / span 1;
+
+    	display: grid;
+    	grid-auto-flow: column;
+    	justify-items: center;
+    	column-gap: 5rem;
+    }
+
+    &__card {
+    	background-color: white;
+    	height: 45rem;
+    	width: 30rem;
+		//border: 1px solid rgba($color-black, .3);
+		box-shadow: 0 10px 6px -10px rgba($color-black, .5);
+
+		display: grid;
+		grid-template-rows: 1.5fr 2fr;
+    }
+
+    &__card-title {
+		height: 100%;
+		width: 100%;
+
+		display: grid;
+		grid-template-rows: 1fr;
+
+		& .heading--forth {
+			z-index: 3;
+			color: rgba($color-white, .6);
+			transition: all .5s;
+		}
+    }
+
+    &__background {
+		height: 100%;
+		width: 100%;
+		background-size: cover;
+        background-position: center;
+        position: relative;
+        transition: all 5s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    	&--1 {
+			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(img/services-1.jpg);
+    	}
+
+    	&--2 {
+			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(img/services-2.jpg);
+    	}
+
+    	&--3 {
+			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(img/services-3.jpg);
+    	}
+
+    	& .copy-border {
+	            background-color: rgba($color-white, .2);
+	            position: absolute;
+	            z-index: 3;
+	            transition: all .5s;
+	        }
+        
+	    & .copy-border-top {
+	            height: 1px;
+	            top: 35%;
+	            left: 17%;
+	            right: 17%;
+	        }
+
+	    & .copy-border-bottom {
+	            height: 1px;
+	            bottom: 35%;
+	            left: 17%;
+	            right: 17%;
+	        }
+
+	    & .copy-border-left {
+	            width: 1px;
+	            top: 31%;
+	            bottom: 31%;
+	            left: 20%;
+	        }
+
+	    & .copy-border-right {
+	            width: 1px;
+	            top: 31%;
+	            bottom: 31%;
+	            right: 20%;
+	        }
+
+	  	&-overlay {
+	  		opacity: 0;
+	  		background: rgba($color-black, .7);
+	  		height: 100%;
+	  		width: 100%;
+	  		position: absolute;
+	  		top: 0%;
+	  		left: 0%;
+	  		z-index: 2;
+	  		transition: all .3s;
+	  	}
+
+	  	&:hover &-overlay {
+	  		opacity: 1;
+	  	}
+
+	  	&:hover .heading--forth {
+	  		color: $color-white;
+	  	}
+
+	  	&:hover .copy-border {
+	  		background-color: rgba($color-white, .6);
+	  	}
+
+    }
+}

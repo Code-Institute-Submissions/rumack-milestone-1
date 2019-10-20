@@ -28,8 +28,8 @@ body {
 // **** Sections formatting ****
 
 section {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 8rem;
+    padding-bottom: 10rem;
 }
 
 // **** Typography ****
@@ -59,8 +59,18 @@ section {
     padding: 0 2rem;
 }
 
+.heading--forth {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+}
+
 .paragraph {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 300;
     text-align: justify;
     letter-spacing: 1px;
