@@ -496,6 +496,20 @@ section {
 .util-margin-top-huge {
   margin-top: 10rem !important; }
 
+.btn {
+  background-color: #f7f7f7;
+  border: 1px solid #3E3D40;
+  color: #3E3D40;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem;
+  margin: 2rem auto;
+  display: block;
+  transition: all .3s; }
+  .btn:hover {
+    background-color: #3E3D40;
+    color: #f7f7f7; }
+
 .gallery {
   margin: 0 auto;
   max-width: 90%;
@@ -863,6 +877,8 @@ section {
       .contact__form .form__group textarea:focus {
         border: 2px solid #92A763; }
       .contact__form .form__group input[type=submit] {
+        text-transform: uppercase;
+        font-size: 1.6rem;
         cursor: pointer;
         transition: all .2s; }
         .contact__form .form__group input[type=submit]:hover {
@@ -969,6 +985,8 @@ section {
       top: -15px;
       bottom: -15px;
       right: 0; }
+  .design__paragraph {
+    font-size: 1.6rem; }
   .design__paragraph:not(last-child) {
     padding-bottom: 1.5rem; }
 
@@ -1382,14 +1400,14 @@ section {
   row-gap: 7rem; }
   .portfolio__intro {
     width: 60%;
-    opacity: 0;
-    animation: fade-in 1.5s linear 2s forwards;
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
     display: grid;
     justify-items: center;
     grid-row-gap: 4rem; }
   .portfolio__gallery {
+    opacity: 0;
+    animation: fade-in 1.5s linear 2s forwards;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1; }
 
@@ -1398,9 +1416,9 @@ section {
   grid-template-columns: minmax(5rem, 0.5fr) 9fr minmax(5rem, 0.5fr);
   grid-template-rows: repeat(2, auto);
   justify-items: center;
-  row-gap: 7rem;
+  row-gap: 8rem;
   background-color: #f7f7f7;
-  padding-bottom: 25rem; }
+  padding-bottom: 12rem; }
   .services__intro {
     grid-row: 1 / span 1;
     grid-column: 2 / span 1;
@@ -1488,6 +1506,39 @@ section {
       color: #f7f7f7; }
     .services__background:hover .copy-border {
       background-color: rgba(247, 247, 247, 0.6); }
+  .services__list {
+    list-style: none; }
+  .services__item {
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    padding-left: 4rem;
+    letter-spacing: .5px;
+    font-weight: 300; }
+  .services__item:first-child {
+    padding-top: 5rem; }
+  .services__item::before {
+    content: "\2605";
+    color: rgba(146, 167, 99, 0.7);
+    padding-right: 1rem;
+    font-weight: lighter; }
+  .services a[class="services__link"]:link,
+  .services a[class="services__link"]:visited {
+    background-color: #f7f7f7;
+    border: 2px solid rgba(62, 61, 64, 0.7);
+    width: 40%;
+    color: #3E3D40;
+    font-size: 1.6rem;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem;
+    margin: 2rem auto;
+    display: block;
+    transition: all .3s; }
+    .services a[class="services__link"]:link:hover,
+    .services a[class="services__link"]:visited:hover {
+      background-color: rgba(62, 61, 64, 0.6);
+      color: #f7f7f7; }
 
 /*!
  * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com

@@ -21,7 +21,7 @@ body {
     color: $color-black;
 }
 
-[required] {               // In Firefox, this removes the red box-shadow from required inputs
+[required] {               // In Firefox, this removes the red box-shadow from inputs with 'required' attribute
     box-shadow: none;
 }
 

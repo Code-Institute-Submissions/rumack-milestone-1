@@ -3,9 +3,9 @@
 	grid-template-columns: minmax(5rem, .5fr) 9fr minmax(5rem, .5fr);
     grid-template-rows: repeat(2, auto);
     justify-items: center;
-    row-gap: 7rem;
+    row-gap: 8rem;
     background-color: $color-white;
-    padding-bottom: 25rem;
+    padding-bottom: 12rem;
 
     &__intro {
     	grid-row: 1 / span 1;
@@ -136,4 +136,55 @@
 	  	}
 
     }
+
+    &__list {
+    	list-style: none;
+    }
+
+    &__item {
+    	font-size: 1.6rem;
+    	padding-top: 1rem;
+    	padding-left: 4rem;
+    	letter-spacing: .5px;
+    	font-weight: 300;
+
+    }
+
+    &__item:first-child {
+    	padding-top: 5rem;
+    }
+
+    &__item::before {
+    	content: "\2605";
+    	color: rgba($color-primary, .7);
+    	padding-right: 1rem;
+    	font-weight: lighter;
+    }
+
+    & a[class="services__link"]:link,
+    & a[class="services__link"]:visited {
+    	background-color: $color-white;
+		border: 2px solid rgba($color-black, .7);
+		width: 40%;
+		color: $color-black;
+		font-size: 1.6rem;
+		letter-spacing: .4px;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 1rem;
+		margin: 2rem auto;
+		display: block;
+		transition: all .3s;
+
+		&:hover {
+			background-color: rgba($color-black, .6);
+			color: $color-white;
+		}
+    }
+
+}
+
+.services__link:link,
+.services__link:visited {
+	
 }
