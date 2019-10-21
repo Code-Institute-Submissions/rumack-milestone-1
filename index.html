@@ -10,8 +10,10 @@
         <title>Bettina Marten</title>
     </head>
     <body>
-<!-- **** Pop-up nav for mobile **** -->
+
         <div class="layout-grid">
+            <!-- **** Pop-up nav for mobile **** -->
+
             <!-- <div class="navigation">
                 <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
                 <label for="nav-toggle" class="navigation__button">
@@ -49,7 +51,7 @@
                 <div class="header__main">
                     <div class="header__logo-box">
                         <!-- To make the line animation work, the SVG paths must be targeted (through classes) as part of the DOM, so the file must be treated inline as part of the HTML-->
-                        <svg class="header__logo"  version="1.1" viewBox="0 0 272.53 52.355" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                        <svg class="header__logo"  aria-label="Welcome to the web page of Bettina Marten Architecture" version="1.1" viewBox="0 0 272.53 52.355" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                             <g transform="translate(32.722 -68.983)">
                                 <g transform="matrix(.35278 0 0 -.35278 -45.95 200.16)">
                                     <g clip-path="url(#clipPath3748)">
@@ -99,11 +101,12 @@
                                 </g>
                             </g>
                         </svg>
-                    </div> 
+                    </div>
+                    <a href="#about" class="header__arrow"><i class="fa fa-chevron-down header__arrow-icon"></i></a> 
                 </div>
             </header>
             
-            <section class="about">
+            <section class="about" id="about">
                 <div class="about__heading">
                     <h2 class="heading--secondary">About<span> us</span></h2> 
                 </div>
@@ -139,6 +142,35 @@
                         </div> 
                         <p class="about__paragraph about__paragraph--5 paragraph">Quisque a erat interdum, fringilla magna eu, cursus urna. Ut lobortis imperdiet enim eget vestibulum. Quisque ac semper quam. Etiam dignissim enim vel elementum tristique. Sed sed rutrum mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                         <p class="about__paragraph paragraph">Curabitur a mollis libero. Cras congue a tellus vel interdum. Integer tempor arcu odio, et pulvinar lacus laoreet sed. Vestibulum ante ipsum primis in faucibus.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="design-bg">
+                <div class="bg">&nbsp;
+                </div>
+            </section>
+
+            <section class="design" id="design">
+                <div class="design__intro">
+                    <h2 class="heading--secondary"><span>design</span> philosophy</h2>
+                    <h3 class="heading--tertiary">La calidad del diseño influencia nuestras vidas. Nuestro esfuerzo se dirige a obtener un buen resultado estético y funcional que logramos con nuestra experiencia.</h3>
+                </div>
+                <div class="design__content">
+                    <div class="design__img-box">
+                        <img src="css/img/design.jpg" alt="" class="design__img design__img-1">
+                    </div>
+                    <div class="design__copy-box">
+                        <div class="design__copy">
+                            <div class="copy-border copy-border-top">&nbsp;</div>
+                            <div class="copy-border copy-border-bottom">&nbsp;</div>
+                            <div class="copy-border copy-border-left">&nbsp;</div>
+                            <div class="copy-border copy-border-right">&nbsp;</div>
+                            <p class="design__paragraph paragraph">La manera de proyectar es mediante un encuentro consistente y filosófico con la obra, no un estilo predeterminado.</p>
+                            <p class="design__paragraph paragraph">Nuestras obras están íntimamente conectadas a su contexto y función. </p>
+                            <p class="design__paragraph paragraph">El resultado es una síntesis de concepto, integración de lo funcional y belleza.</p>
+                            <p class="design__paragraph paragraph">Procuramos que la obra de buena respuesta a su medio, y sea de carácter sostenible para que perdure en el tiempo su valor inicial.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -210,36 +242,6 @@
                         </div>
                     </div>
                 </div>
-
-            </section>
-
-            <section class="design-bg">
-                <div class="bg">&nbsp;
-                </div>
-            </section>
-
-            <section class="design" id="design">
-                <div class="design__intro">
-                    <h2 class="heading--secondary"><span>design</span> philosophy</h2>
-                    <h3 class="heading--tertiary">La calidad del diseño influencia nuestras vidas. Nuestro esfuerzo se dirige a obtener un buen resultado estético y funcional que logramos con nuestra experiencia.</h3>
-                </div>
-                <div class="design__content">
-                    <div class="design__img-box">
-                        <img src="css/img/design.jpg" alt="" class="design__img design__img-1">
-                    </div>
-                    <div class="design__copy-box">
-                        <div class="design__copy">
-                            <div class="copy-border copy-border-top">&nbsp;</div>
-                            <div class="copy-border copy-border-bottom">&nbsp;</div>
-                            <div class="copy-border copy-border-left">&nbsp;</div>
-                            <div class="copy-border copy-border-right">&nbsp;</div>
-                            <p class="design__paragraph paragraph">La manera de proyectar es mediante un encuentro consistente y filosófico con la obra, no un estilo predeterminado.</p>
-                            <p class="design__paragraph paragraph">Nuestras obras están íntimamente conectadas a su contexto y función. </p>
-                            <p class="design__paragraph paragraph">El resultado es una síntesis de concepto, integración de lo funcional y belleza.</p>
-                            <p class="design__paragraph paragraph">Procuramos que la obra de buena respuesta a su medio, y sea de carácter sostenible para que perdure en el tiempo su valor inicial.</p>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <section class="portfolio" id="portfolio">
@@ -306,33 +308,7 @@
                     <div class="footer__logo-box">
                             <img src="css/img/footer_logo2.png" class="footer__logo logo">
                     </div>
-                    <div class="social footer__social">
-                        <a href="#" class="social__link">
-                            <svg class="social__icon">
-                                    <use xlink:href="css/img/sprite.svg#icon-mobile"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="social__link">
-                            <svg class="social__icon">
-                                    <use xlink:href="css/img/sprite.svg#icon-mail"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="social__link">
-                            <svg class="social__icon">
-                                    <use xlink:href="css/img/sprite.svg#icon-facebook2"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="social__link">
-                            <svg class="social__icon">
-                                    <use xlink:href="css/img/sprite.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="social__link">
-                            <svg class="social__icon">
-                                    <use xlink:href="css/img/sprite.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </div>
+                   
                     <a href="#" class="footer__top-link"><p><span class="footer__arrow">&uarr;</span>Top of page</p></a>
                     
                     <p class="footer__copyright">&copy; Bettina Marten 2019</p>
@@ -343,7 +319,7 @@
 
         </div>
 
-        <!-- ***************** ANNEX ***************** -->
+        <!-- ***************** ANNEX -- POP-UP ALBUMS ***************** -->
 
         <!-- POP-UP ALBUM - PROJECT ONE -->
         <div class="album album-1" id="album--1">

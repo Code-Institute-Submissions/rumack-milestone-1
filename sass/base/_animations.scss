@@ -22,6 +22,20 @@
     }
 }
 
+@keyframes pulse {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: .9;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(7rem);
+    }
+}
+
 // Keyframes for each individual letter path with stroke-dashoffset setting
 
 // Keyframes for 'bettina marten' - through mixins in "abstracts/_mixins"

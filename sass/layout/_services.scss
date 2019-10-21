@@ -4,8 +4,8 @@
     grid-template-rows: repeat(2, auto);
     justify-items: center;
     row-gap: 8rem;
-    background-color: $color-white;
-    padding-bottom: 12rem;
+    background-color: white;
+    padding-bottom: 15rem;
 
     &__intro {
     	grid-row: 1 / span 1;
@@ -28,7 +28,7 @@
     }
 
     &__card {
-    	background-color: white;
+    	background-color: $color-white;
     	height: 45rem;
     	width: 30rem;
 		//border: 1px solid rgba($color-black, .3);
@@ -69,11 +69,11 @@
     	}
 
     	&--2 {
-			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(img/services-2.jpg);
+			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(img/services-2b.jpg);
     	}
 
     	&--3 {
-			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(img/services-3.jpg);
+			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(img/services-3b.jpg);
     	}
 
     	& .copy-border {
@@ -147,38 +147,46 @@
     	padding-left: 4rem;
     	letter-spacing: .5px;
     	font-weight: 300;
-
     }
 
     &__item:first-child {
-    	padding-top: 5rem;
+    	margin-top: 3rem;
     }
 
     &__item::before {
-    	content: "\2605";
+    	content: "\2698";
     	color: rgba($color-primary, .7);
     	padding-right: 1rem;
     	font-weight: lighter;
     }
 
+
     & a[class="services__link"]:link,
     & a[class="services__link"]:visited {
     	background-color: $color-white;
-		border: 2px solid rgba($color-black, .7);
+		border: 1px solid rgba($color-black, .7);
 		width: 40%;
 		color: $color-black;
 		font-size: 1.6rem;
+		font-weight: 300;
 		letter-spacing: .4px;
 		text-transform: uppercase;
 		text-decoration: none;
+		box-shadow: 0 10px 6px -10px rgba($color-black, .5);
 		padding: 1rem;
-		margin: 2rem auto;
+		margin: 4rem auto;
 		display: block;
-		transition: all .3s;
+		transition: all .2s;
 
 		&:hover {
 			background-color: rgba($color-black, .6);
 			color: $color-white;
+			font-weight: 400;
+		}
+
+		&:active {
+			transform: translateY(1px);
+			box-shadow: 0 5px 3px -10px rgba($color-black, .5);
 		}
     }
 

@@ -77,12 +77,19 @@
                 & input[type=submit] {
                     text-transform: uppercase;
                     font-size: 1.6rem;
+                    box-shadow: 0 10px 6px -10px rgba($color-black, .5);
                     cursor: pointer;
                     transition: all .2s;
+                    margin-top: 2rem;
 
                     &:hover {
                         background-color: rgba($color-black, .6);
                         color: $color-white;
+                    }
+
+                    &:active {
+                        box-shadow: 0 5px 3px -10px rgba($color-black, .5);
+                        transform: translateY(1px);
                     }
                 }
 
