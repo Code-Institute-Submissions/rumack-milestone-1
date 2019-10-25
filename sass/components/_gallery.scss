@@ -2,178 +2,115 @@
     margin: 0 auto;
     max-width: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-column-gap: 8rem;
-    grid-row-gap: 8rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));  // change min to 3 with media query   
+    grid-row-gap: 5rem;
+    grid-column-gap: 5rem;
+
+    @media only screen and (max-width: 37.5em) {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
     
+    &__album {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        box-shadow: 0 10px 6px -10px rgba($color-black, .5);
+
+        &:hover > .gallery__overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
     &__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        box-shadow: 0 10px 6px -10px rgba($color-black, .5);
-        transition: all .5s;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
     }
 
     &__link {
+        text-decoration: none;
+        transition: all .5s;
+
+        &:hover > .gallery__icon {
+            transform: scale(1.05);
+            color: white;
+        }
+    }
+
+    &__icon {
+        font-size: 3rem;
+        color: $color-white;
+    }
+
+    &__overlay {
         width: 100%;
         height: 100%;
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s;
 
-        &::after {
-            line-height: 1.6;
-            font-size: 1.4rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            color: $color-white;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            padding: 1rem;
-            opacity: 0;
-            backface-visibility: hidden;
-            transition: all .7s;
-        }
+        opacity: 0;
+        visibility: hidden;
 
-        &:hover::after {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: 75em) {
             opacity: 1;
-            
-        }
-
-        &:hover > .gallery__img {
-            box-shadow: 0 8px 5px -10px rgba($color-black, .5);
+            visibility: visible;
         }
     }
 
-    &__link--1 {
-
-        &::after {
-            content: "qsdqs qsd qsd  qs qsd qsd qs sq qs";
-            background-color: rgba($color-black, 0.99);
-        }
+    &__overlay--1 {
+        background-color: rgba($color-black, $overlay-transparencies-setting); 
     }
 
-    &__link--2 {
-
-        &::after {
-            content: "sdln sd ncdljkndfgn dfgndfkjnf sdkjgn dsn fkj dfkjg df ";
-            background-color: rgba($color-primary, 0.99);
-        }
+    &__overlay--2 {
+        background-color: rgba($color-primary, $overlay-transparencies-setting);
     }
 
-    &__link--3 {
-
-        &::after {
-            content: "dfgkjk jgdf jgdfjgdgdj hltk ";
-            background-color: rgba($color-grey, 0.99);
-        }
+    &__overlay--3 {
+        background-color: rgba($color-grey, $overlay-transparencies-setting);
     }
 
-    &__link--4 {
-
-        &::after {
-            content: "eroitoerit ue rrot eori oier reo itu rei ";
-            background-color: rgba($color-black, 0.99);
-        }
+    &__overlay--4 {
+        background-color: rgba($color-black, $overlay-transparencies-setting);
     }
 
-    &__link--5 {
-
-        &::after {
-            content: "l kjer kl lk lk  lkjr k rlrk jrlkjerkjerkl";
-            background-color: rgba($color-black, 0.99);
-        }
+    &__overlay--5 {
+        background-color: rgba($color-grey, $overlay-transparencies-setting);
     }
 
-    &__link--6 {
-
-        &::after {
-            content: "wxc c  w xwc wxowiox opixwjc xw cxw ";
-            background-color: rgba($color-black, 0.99);
-        }
+    &__overlay--6 {
+      background-color: rgba($color-black, $overlay-transparencies-setting); 
     }
 
-    &__link--7 {
-
-        &::after {
-            content: "azkza za azzozoa dopa zpoza poza zpo";
-            background-color: rgba($color-black, 0.99);
-        }
+    &__overlay--7 {
+        background-color: rgba($color-primary, $overlay-transparencies-setting); 
     }
 
-    &__link--8 {
-
-        &::after {
-            content: "zieu i   ezieu uiz fiu fhuf hz";
-            background-color: rgba($color-black, 0.99);
-        }
+    &__overlay--8 {
+        background-color: rgba($color-grey, $overlay-transparencies-setting);
     }
 
-    &__link--9 {
-
-        &::after {
-            content: "uizaueh ueazueh zaui htrugrepioug eghruihtg urt trurt";
-            background-color: rgba($color-black, 0.99);
-        }
+    &__overlay--9 {
+        background-color: rgba($color-black, $overlay-transparencies-setting);
     }
 
-    &__link--10 {
-
-        &::after {
-            content: "q sdsj dhizea disz dij idjzeio ei";
-            background-color: rgba($color-black, 0.99);
-        }
-    }
-
-    &__link--11 {
-
-        &::after {
-            content: "qsdqs qsd qsd  qs qsd qsd qs sq qs";
-            background-color: rgba($color-black, 0.99);
-        }
-    }
-
-    &__link--12 {
-
-        &::after {
-            content: "qsdqs qsd qsd  qs qsd qsd qs sq qs";
-            background-color: rgba($color-black, 0.99);
-        }
-    }
-
-    &__link--13 {
-
-        &::after {
-            content: "qsdqs qsd qsd  qs qsd qsd qs sq qs";
-            background-color: rgba($color-black, 0.99);
-        }
-    }
-
-    &__link--14 {
-
-        &::after {
-            content: "qsdqs qsd qsd  qs qsd qsd qs sq qs";
-            background-color: rgba($color-black, 0.99);
-        }
-    }
-
-    &__link--15 {
-
-        &::after {
-            content: "qsdqs qsd qsd  qs qsd qsd qs sq qs";
-            background-color: rgba($color-black, 0.99);
-        }
+    &__overlay--10 {
+        background-color: rgba($color-primary, $overlay-transparencies-setting);
     }
 }
 
 // ALBUM STYLING
 
 .album {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+
     background-color: rgba(black, 0.94);
     position: fixed;
     top: 0;
@@ -190,23 +127,28 @@
         width: 100%;
         height: 100%;
         display: grid;
-        grid-template-rows: repeat(12, 1fr);
-        grid-template-columns: repeat(12, 1fr);
-        justify-content: center;
-        grid-column-gap: 1rem;
+        grid-template-rows: 69% 29%;
+        grid-template-columns: repeat(5, 1fr);
+        grid-row-gap: 5rem;
+        position: relative;
+        align-items: center;
+        justify-items: center;
+
+        @media only screen and (max-width: 75em) and (orientation: landscape) {
+             grid-row-gap: 2rem;
+        }
     }
 
     &__close:link,
     &__close:visited {
-        grid-row: 1 / span 1;
-        grid-column: 11 / span 1;
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
         background-color: rgba($color-black, 0.0);
         color: $color-white;
         line-height: 1;
         font-size: 3rem;
         font-weight: 400;
-        align-self: flex-end;
-        font-size: 3rem;
         text-decoration: none;
         transition: all .2s;
     }
@@ -216,60 +158,74 @@
     }
 
     &__display {
-        grid-row: 2 / 9;
-        grid-column: 4 / span 6;
-        border: 1rem solid $color-white;
-        
-        border-radius: .2rem;
+        grid-row: 1 / span 1;
+        grid-column: 1 / -1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__thumbnail {
-        grid-row: 10 / 11;
+        grid-row: 2 / span 1;
         background-color: rgba($color-white, 0.0);
         cursor: pointer;
         z-index: 20; 
+
+        display: flex;
+        justify-content: center;
     }
 
-    &__thumbnail-1 {
-        grid-column: 4 / span 1;
-    }
+    // &__thumbnail-1 {
+    //     grid-column: 3 / span 1;
+    // }
 
-    &__thumbnail-2 {
-        grid-column: 5 / span 1;
-    }
+    // &__thumbnail-2 {
+    //     grid-column: 4 / span 1;
+    // }
 
-    &__thumbnail-3 {
-        grid-column: 6 / span 1;
-    }
+    // &__thumbnail-3 {
+    //     grid-column: 5 / span 1;
+    // }
 
-    &__thumbnail-4 {
-        grid-column: 7 / span 1;
-    }
+    // &__thumbnail-4 {
+    //     grid-column: 6 / span 1;
+    // }
 
-    &__thumbnail-5 {
-        grid-column: 8 / span 1;
-    }
+    // &__thumbnail-5 {
+    //     grid-row: 3 / span 1;
+    // }
 
-    &__thumbnail-6 {
-        grid-column: 9 / span 1;
-    }
+    // &__thumbnail-6 {
+    //     grid-row: 3 / span 1;
+    // }
 
     &__img {
-        width: 100%;
-        height: 100%;
+        
+        width: 80%;
+        max-width: 70rem;
+        height: auto;
         object-fit: cover;
+        margin-top: 8rem;
         display: none;
+
+        border: 1rem solid $color-white;
+        
+        border-radius: .2rem;
         transition: all .3s;
 
+        @media only screen and (max-width: 75em) and (orientation: landscape) {
+            width: 50%;
+            max-width: 40%; 
+        }
     }
 
     &__img--small {
-        width: 100%;
-        height: 100%;
+        width: 70%;
+        height: auto;
         object-fit: cover;
         box-shadow: 0 10px 6px -10px rgba($color-grey, .5);
         border-bottom: 1px solid transparent;
-        
         transition: all .3s;
 
         &:hover {
@@ -316,6 +272,7 @@
     }
 
     // Radio-buttton actions - scale, darken and adjust box-shadow of active thumbnail image
+
 
     &__bg > &__radio--1:checked + label > img {
         transform: scale(0.8);

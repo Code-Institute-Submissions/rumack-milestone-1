@@ -3,7 +3,7 @@
     
 
     display: grid;
-    grid-template-columns: minmax(5rem, 1fr) 10fr minmax(5rem, 1fr);
+    grid-template-columns: minmax(4rem, 1fr) 10fr minmax(4rem, 1fr);
     grid-template-rows: repeat(3, auto);
     justify-items: center;
     row-gap: 4rem;
@@ -16,6 +16,11 @@
         display: grid;
         justify-items: center;
         grid-row-gap: 4rem;
+
+        @media only screen and (max-width: 56.25em) {
+            width: 90%;
+        }
+        
     }
 
     &__social {
@@ -31,13 +36,22 @@
         grid-column: 2 / span 1;
         grid-row: 3 / span 1;
         max-width: 70%;
+
+        @media only screen and (max-width: 56.25em) {
+            max-width: 90%;
+            width: 90%;
+        }
     
         .form {
 
             display: grid;
-            grid-template-columns: repeat(2, auto);
+            grid-template-columns: repeat(2, minmax(3rem, auto));
             grid-template-rows: repeat(4, auto);
             grid-gap: 2.5rem;
+
+            @media only screen and (max-width: 37.5em) {
+                grid-template-rows: repeat(5, auto);
+            }
 
             &__group {
 
@@ -62,7 +76,8 @@
                     line-height: 2;
                     width: 100%;
                     outline: none;
-                    border: 2px solid rgba($color-black, .7);
+                    border: 2px solid transparent;
+                    outline: 1px solid rgba($color-black, .4);
                     padding: 0 1rem; 
                 }
 
@@ -113,27 +128,48 @@
             &__group--name {
                 grid-column: 1 / span 1;
                 grid-row: 1 / span 1;
+
+                @media only screen and (max-width: 56.25em) {
+                    grid-column: 1 / span 2;
+                }
             }
 
             &__group--email {
                 grid-column: 2 / span 1;
                 grid-row: 1 / span 1;
+
+                @media only screen and (max-width: 56.25em) {
+                    grid-row: 2 / span 1;
+                    grid-column: 1 / span 2;
+                }
             }
 
             &__group--subject {
                 grid-column: 1 / span 2;
                 grid-row: 2 / span 1;
+
+                @media only screen and (max-width: 56.25em) {
+                    grid-row: 3 / span 1;
+                }
             }
 
             &__group--message {
                 grid-column: 1 / span 2;
                 grid-row: 3 / span 1;
+
+                @media only screen and (max-width: 56.25em) {
+                    grid-row: 4 / span 1;
+                }
             }
 
             &__group--submit {
                 grid-column: 1 / span 2;
                 grid-row: 4 / span 1;
                 justify-self: center;
+
+                @media only screen and (max-width: 56.25em) {
+                    grid-row: 5 / span 1;
+                }
             }
         }
     }

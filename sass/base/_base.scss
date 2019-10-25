@@ -12,7 +12,21 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; 
     scroll-behavior: smooth;
+
+    @media only screen and (max-width: 75em) {
+        font-size: 56%;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+        font-size: 50%;
+    }
+
 }
+
+// html,
+// body {
+//     overflow-x: hidden;
+// }
     
 body {
     font-family: "Lato", sans-serif;
@@ -30,6 +44,18 @@ body {
 section {
     padding-top: 8rem;
     padding-bottom: 10rem;
+
+    @media only screen and (max-width: 75em) {
+        padding-top: 6rem;
+        padding-bottom: 8rem;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+    }
+
+
 }
 
 // **** Typography ****
@@ -57,6 +83,12 @@ section {
     font-weight: 300;
     text-align: center;
     padding: 0 2rem;
+
+    @media only screen and (max-width: 37.5em) {
+        text-align: justify;
+        letter-spacing: .5px;
+        padding: 0;
+    }
 }
 
 .heading--forth {
@@ -74,6 +106,10 @@ section {
     font-weight: 300;
     text-align: justify;
     letter-spacing: 1px;
+
+    @media only screen and (max-width: 37.5em) {
+        letter-spacing: .3px;
+    }
 }
 
 

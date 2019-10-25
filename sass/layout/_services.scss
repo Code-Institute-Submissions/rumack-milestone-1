@@ -7,6 +7,18 @@
     background-color: white;
     padding-bottom: 15rem;
 
+    @media only screen and (max-width: 75em) {
+        padding-bottom: 10rem;
+    }
+
+	@media only screen and (max-width: 56.25em) {
+        padding-bottom: 6rem;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+        row-gap: 4rem;
+    }
+
     &__intro {
     	grid-row: 1 / span 1;
  		grid-column: 2 / span 1;
@@ -15,27 +27,40 @@
  		display: grid;
  		justify-items: center;
  		grid-row-gap: 4rem;
+
+ 		@media only screen and (max-width: 56.25em) {
+            width: 90%;
+        }
     }
 
     &__content {
     	grid-row: 2 / span 1;
     	grid-column: 2 / span 1;
+		margin: 0 auto;
 
-    	display: grid;
-    	grid-auto-flow: column;
-    	justify-items: center;
-    	column-gap: 5rem;
+    	// display: grid;
+    	// grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));
+    	// grid-auto-flow: column;
+    	// justify-items: center;
+    	// column-gap: 5rem;
+
+    	display: flex;
+    	flex-wrap: wrap;
+    	justify-content: center;
+
     }
 
     &__card {
     	background-color: $color-white;
     	height: 45rem;
     	width: 30rem;
-		//border: 1px solid rgba($color-black, .3);
+		border: 1px solid rgba($color-black, .3);
 		box-shadow: 0 10px 6px -10px rgba($color-black, .5);
+		margin: 2rem;
 
 		display: grid;
 		grid-template-rows: 1.5fr 2fr;
+
     }
 
     &__card-title {
@@ -49,6 +74,10 @@
 			z-index: 3;
 			color: rgba($color-white, .6);
 			transition: all .5s;
+
+			@media only screen and (max-width: 75em) {
+		        color: $color-white;
+		    }
 		}
     }
 
@@ -81,6 +110,10 @@
 	            position: absolute;
 	            z-index: 3;
 	            transition: all .5s;
+
+	            @media only screen and (max-width: 75em) {
+			        background-color: $color-white;
+			    }
 	        }
         
 	    & .copy-border-top {
@@ -121,6 +154,10 @@
 	  		left: 0%;
 	  		z-index: 2;
 	  		transition: all .3s;
+
+	  		@media only screen and (max-width: 75em) {
+		        opacity: 1;
+		    }
 	  	}
 
 	  	&:hover &-overlay {
@@ -189,10 +226,5 @@
 			box-shadow: 0 5px 3px -10px rgba($color-black, .5);
 		}
     }
-
 }
 
-.services__link:link,
-.services__link:visited {
-	
-}

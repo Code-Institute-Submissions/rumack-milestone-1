@@ -36,6 +36,30 @@
     }
 }
 
+@keyframes animateBorder {
+    0% {
+        border: 1px solid transparent;
+    }
+    15% {
+        border: 1px solid $color-white;
+    }
+    30% {
+        border: 1px solid transparent;
+    }
+    45% {
+        border: 1px solid $color-white;
+    }
+    60% {
+        border: 1px solid transparent;
+    }
+    75% {
+        border: 1px solid $color-white;
+    }
+    90% {
+        border: 1px solid transparent;
+    }
+}
+
 // Keyframes for each individual letter path with stroke-dashoffset setting
 
 // Keyframes for 'bettina marten' - through mixins in "abstracts/_mixins"
