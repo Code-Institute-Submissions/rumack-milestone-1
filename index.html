@@ -11,32 +11,32 @@
     </head>
     <body>
 
-        <div class="layout-grid">
-            <!-- **** Pop-up nav for mobile **** -->
+        <!-- **** Pop-up nav for mobile **** -->
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#services" class="navigation__link">Services</a></li>
+                    <li class="navigation__item"><a href="#portfolio" class="navigation__link">Portfolio</a></li>
+                    <li class="navigation__item"><a href="#contact" class="navigation__link">Contact</a></li>
+                </ul>  
+            </nav>
+        </div>
 
-            <!-- <div class="navigation">
-                <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-                <label for="nav-toggle" class="navigation__button">
-                    <span class="navigation__icon">&nbsp;</span>
-                </label>
-                <nav class="navigation__nav">
-                    <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Services</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Portfolio</a></li>
-                        <li class="navigation__item"><a href="#contact" class="navigation__link">Contact</a></li>
-                    </ul>  
-                </nav>
-            </div> -->
+        <div class="layout-grid">
+
+            <!-- **** Main page **** -->
             <header class="header">
                 <div class="header__bg"></div>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item"><a href="#" class="header__nav-link">Home</a></li>
-                        <!-- <li class="header__nav-item"><a href="#" class="header__nav-link">About</a></li> -->
                         <li class="header__nav-item"><a href="#services" class="header__nav-link">Services</a></li>
-                        <!-- <li class="header__nav-item"><a href="#design" class="header__nav-link">Design</a></li> -->
                         <li class="header__nav-item"><a href="#portfolio" class="header__nav-link">Portfolio</a></li>
                         <li class="header__nav-item"><a href="#contact" class="header__nav-link">Contact</a></li>
                     </ul>  
@@ -48,8 +48,25 @@
                         </ul>
                     </div>
                 </nav>
+
+                <nav class="header__nav--mob">
+                    <ul class="header__nav--mob-list">
+                        <li class="header__nav--mob-item">
+                            <a href="#" class="header__nav--mob-link"><i class="fal fa-home header__nav--mob-icon"></i></a>
+                        </li>
+                        <li class="header__nav--mob-item">
+                            <a href="#services" class="header__nav--mob-link"><i class="fal fa-user-hard-hat header__nav--mob-icon"></i></a>
+                        </li>
+                        <li class="header__nav--mob-item">
+                            <a href="#portfolio" class="header__nav--mob-link"><i class="fal fa-images header__nav--mob-icon"></i></a>
+                        </li>
+                        <li class="header__nav--mob-item">
+                            <a href="#contact" class="header__nav--mob-link"><i class="fal fa-address-card header__nav--mob-icon"></i></a>
+                        </li>
+                    </ul>
+                </nav>
                  
-                <!-- fa-external-link-alt To make the line animation work, the SVG paths must be targeted (through classes) as part of the DOM, so the file must be treated inline as part of the HTML-->
+                <!-- To make the line animation work, the SVG paths must be targeted (through classes) as part of the DOM, so the file must be treated inline as part of the HTML-->
 
                 <svg class="header__logo"  aria-label="Welcome to the web page of Bettina Marten Architecture" version="1.1" viewBox="0 0 272.53 52.355" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                     <g transform="translate(32.722 -68.983)">
@@ -564,8 +581,8 @@
                 <input id="grp-9-img--5" type="radio" name="grp-9-img-select" class="album__radio album__radio--5">
                 <label for="grp-9-img--5" class="album__thumbnail album__thumbnail-5"><img src="css/img/album-9--5.jpg" alt="" class="album__img--small album__img--small-5"></label>
 
-                <input id="grp-9-img--6" type="radio" name="grp-9-img-select" class="album__radio album__radio--6">
-                <label for="grp-9-img--6" class="album__thumbnail album__thumbnail-6"><img src="css/img/album-9--6.jpg" alt="" class="album__img--small album__img--small-6"></label>
+                <!-- <input id="grp-9-img--6" type="radio" name="grp-9-img-select" class="album__radio album__radio--6">
+                <label for="grp-9-img--6" class="album__thumbnail album__thumbnail-6"><img src="css/img/album-9--6.jpg" alt="" class="album__img--small album__img--small-6"></label> -->
 
                 <div class="album__display">
                     <img src="css/img/album-9--1.jpg" alt="" class="album__img album__img--1">
@@ -573,7 +590,7 @@
                     <img src="css/img/album-9--3.jpg" alt="" class="album__img album__img--3">
                     <img src="css/img/album-9--4.jpg" alt="" class="album__img album__img--4">
                     <img src="css/img/album-9--5.jpg" alt="" class="album__img album__img--5">
-                    <img src="css/img/album-9--6.jpg" alt="" class="album__img album__img--6">
+                    <!-- <img src="css/img/album-9--6.jpg" alt="" class="album__img album__img--6"> -->
                 </div>
             </div>
         </div>  

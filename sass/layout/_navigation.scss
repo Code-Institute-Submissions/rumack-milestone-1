@@ -1,5 +1,17 @@
 .navigation {
     display: none;
+
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 3%;
+    // background-image: linear-gradient(to right, rgba($color-white, .8), rgba($color-white, .6));
+    // background-size: cover;
+
+    // @media only screen and (max-width: 56.25em) {
+    //     display: block;
+    // }
     
 // NAV STYLING AND POSITIONING
     
@@ -9,14 +21,14 @@
 
     &__button {
         position: fixed;
-        left: 0;
-        right: 0;
+        top: 2rem;
+        right: 2rem;
         margin: 1rem auto;
-        height: 6.5rem;
+        height: 3rem;
         width: 6.5rem;
         background-color: $color-white;
-        border-radius: 50%;
-        border: 3px solid $color-primary;
+        //border-radius: 50%;
+        //border: 3px solid $color-primary;
         cursor: pointer;
 
         display: grid;
@@ -24,17 +36,17 @@
         justify-items: center;
         align-content: center;
         grid-row-gap: .7rem;
-        transition: all .2s linear;
+        // transition: all .2s linear;
         z-index: 10;
 
-        &:hover {
-            grid-row-gap: .9rem;
-            transform: scale(1.08);
-        }
+        // &:hover {
+        //     grid-row-gap: .9rem;
+        //     transform: scale(1.08);
+        // }
 
-        &:active {
+        // &:active {
             
-        }
+        // }
         
     }
 
