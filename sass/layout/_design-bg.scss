@@ -4,14 +4,20 @@
 	padding: 0rem;
 	overflow: hidden;
 
+	.heading--secondary { // This apparently is good practice - a section should always have a header says the html validator
+		display: none;
+	}
+
 	.bg {
 		width: 100%;
 		height: 100%;
 
-		background-image: linear-gradient(rgba(white, .5), rgba(white, .5)), url(img/design-bg.jpg);
-		// background-position: top;
-		// background-size: cover;
+		background-image: linear-gradient(rgba(white, .5), rgba(white, .5)), url(../img/design-bg.jpg);
 		background-attachment: fixed;
 		border: 1px solid rgba($color-black, .2);
+		// Smaller screen, much smaller image served
+		@media only screen and (max-width: 37.5em) {
+	        background-image: linear-gradient(rgba(white, .5), rgba(white, .5)), url(../img/design-bg--mob.jpg);
+	    }
 	}
 }

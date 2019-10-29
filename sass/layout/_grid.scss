@@ -1,3 +1,5 @@
+// A very simple overall grid layout. More complex grids are used within each section which allows for more flexibility depending on the content.
+
 .layout-grid {
     display: grid;
     grid-template-rows: 100vh repeat(8, auto);

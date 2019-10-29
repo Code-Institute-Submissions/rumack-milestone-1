@@ -11,28 +11,12 @@
     </head>
     <body>
 
-        <!-- **** Pop-up nav for mobile **** -->
-        <div class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-            <label for="nav-toggle" class="navigation__button">
-                <span class="navigation__icon">&nbsp;</span>
-            </label>
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
-                    <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
-                    <li class="navigation__item"><a href="#services" class="navigation__link">Services</a></li>
-                    <li class="navigation__item"><a href="#portfolio" class="navigation__link">Portfolio</a></li>
-                    <li class="navigation__item"><a href="#contact" class="navigation__link">Contact</a></li>
-                </ul>  
-            </nav>
-        </div>
-
         <div class="layout-grid">
 
             <!-- **** Main page **** -->
             <header class="header">
                 <div class="header__bg"></div>
+                <!-- Nav bar on desktop -->
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item"><a href="#" class="header__nav-link">Home</a></li>
@@ -48,7 +32,7 @@
                         </ul>
                     </div>
                 </nav>
-
+                <!-- Tablet and mobile nav bar -->
                 <nav class="header__nav--mob">
                     <ul class="header__nav--mob-list">
                         <li class="header__nav--mob-item">
@@ -64,11 +48,10 @@
                             <a href="#contact" class="header__nav--mob-link"><i class="fal fa-address-card header__nav--mob-icon"></i></a>
                         </li>
                     </ul>
-                </nav>
-                 
-                <!-- To make the line animation work, the SVG paths must be targeted (through classes) as part of the DOM, so the file must be treated inline as part of the HTML-->
+                </nav>   
 
-                <svg class="header__logo"  aria-label="Welcome to the web page of Bettina Marten Architecture" version="1.1" viewBox="0 0 272.53 52.355" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                <!-- To make the line animation work, the SVG paths must be targeted (through classes) as part of the DOM, so the file must be treated inline as part of the HTML-->
+                <svg class="header__logo"  aria-label="Welcome to the web page of Bettina Marten Architecture" version="1.1" viewBox="0 0 272.53 52.355">
                     <g transform="translate(32.722 -68.983)">
                         <g transform="matrix(.35278 0 0 -.35278 -45.95 200.16)">
                             <g clip-path="url(#clipPath3748)">
@@ -122,46 +105,42 @@
             </header>
             
             <section class="about" id="about">
-
                 <div class="about__heading">
                     <h2 class="heading--secondary">About<span> us</span></h2> 
                 </div>
-
                 <div class="about__content">
                     <div class="about__lead">
                         <h3 class="heading--tertiary">
                             I'm Bettina Marten, a landcape architect with twenty years of experience working in the Barcelona region. I undertake all manner of projects: gardens in private homes, public parks, municipal spaces or commercial premises, managing everything from the design stage through to implementation and maintenance.
                         </h3>
                         <div class="about__photo-frame">
-                            <div class="copy-border copy-border-top">&nbsp;</div>
-                            <div class="copy-border copy-border-bottom">&nbsp;</div>
-                            <div class="copy-border copy-border-left">&nbsp;</div>
-                            <div class="copy-border copy-border-right">&nbsp;</div>
-                            <img src="css/img/about__bettina_img.jpg" alt="" class="about__photo-img"> 
+                            <div class="frame frame-top">&nbsp;</div>
+                            <div class="frame frame-bottom">&nbsp;</div>
+                            <div class="frame frame-left">&nbsp;</div>
+                            <div class="frame frame-right">&nbsp;</div>
+                            <img src="img/about__bettina_img.jpg" alt="Bettina Marten" class="about__photo-img"> 
                         </div>
                     </div>
-                    
                     <div class="about__copy">
-                        <p class="about__paragraph paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, incidunt. Quis aperiam commod.</p>
-                        <p class="about__paragraph paragraph">Suspendisse id consectetur lacus. Curabitur elementum varius lectus quis ultrices. Donec mattis nulla eget enim suscipit tempor. Sit amet consectetur adipisicing elit. Alias minima odit exercitationem magni quae beatae et, adipisci quasi dolorum nesciunt?</p>
-                        <p class="about__paragraph paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias minima odit exercitationem magni quae beatae.</p>
-                        <p class="about__paragraph paragraph">Aliquam sed bibendum leo, eu pellentesque elit. Curabitur lorem orci, vestibulum non scelerisque ut, finibus et est. Sed tempor dignissim nisi, et feugiat sapien rutrum ac. Maecenas fermentum fermentum eros in egestas. Praesent at turpis sit amet nibh consequat lacinia ut ac enim.</p>
+                        <p class="about__paragraph paragraph">Since launching in Barcelona in 2004 Betina Marten Landscape Architecture has worked on over 200 garden design projects for clients in the Barcelona area and beyond.</p>
+                        <p class="about__paragraph paragraph">Our portfolio of work includes a wide range of garden designs, from contemporary roof terraces to large country gardens. Our gardens are recognised for their strong, clean, architectural lines, rich planting, and elegant styling and use of colour.</p>
+                        <p class="about__paragraph paragraph">We also specialise in discreet but effective garden lighting and bespoke water features.</p>
+                        <p class="about__paragraph paragraph">We work with a small number of trusted landscape contractors to provide clients with a high quality service suited to their individual needs and requirements. All plants are sourced from specialist nurseries, which can provide strong, healthy plants, and most of the design details such as benches, trellises, water features and plant containers are especially designed and built to our requirements.</p>
                         <div class="about__photo-frame about__photo-frame-trans">
-                            <div class="copy-border copy-border-top">&nbsp;</div>
-                            <div class="copy-border copy-border-bottom">&nbsp;</div>
-                            <div class="copy-border copy-border-left">&nbsp;</div>
-                            <div class="copy-border copy-border-right">&nbsp;</div>
-                            <img src="css/img/about__team.jpg" alt="" class="about__photo-img"> 
+                            <div class="frame frame-top">&nbsp;</div>
+                            <div class="frame frame-bottom">&nbsp;</div>
+                            <div class="frame frame-left">&nbsp;</div>
+                            <div class="frame frame-right">&nbsp;</div>
+                            <img src="img/about__team.jpg" alt="The team at work" class="about__photo-img"> 
                         </div>
-                        <p class="about__paragraph about__paragraph--5 paragraph">Quisque a erat interdum, fringilla magna eu, cursus urna. Ut lobortis imperdiet enim eget vestibulum. Quisque ac semper quam. Etiam dignissim enim vel elementum tristique. Sed sed rutrum mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                        <p class="about__paragraph paragraph">Curabitur a mollis libero. Cras congue a tellus vel interdum. Integer tempor arcu odio, et pulvinar lacus laoreet sed. Vestibulum ante ipsum primis in faucibus.</p>
+                        <p class="about__paragraph about__paragraph--5 paragraph">Lighting is also a speciality. We can provide lighting plans ourselves, or sometimes we work with specialist lighting designers for clients who have specific requirements.</p>
+                        <p class="about__paragraph paragraph">We work with a select group of contractors and specialists to ensure the garden design process, from initial concept to project completion, is smooth and seamless.</p>
                     </div>
-
                 </div>
-
             </section>
 
             <section class="design-bg">
+                <h2 class="heading--secondary"><span>sample</span> designs</h2>
                 <div class="bg">&nbsp;
                 </div>
             </section>
@@ -173,14 +152,14 @@
                 </div>
                 <div class="design__content">
                     <div class="design__img-box">
-                        <img src="css/img/design.jpg" alt="" class="design__img design__img-1">
+                        <img src="img/design.jpg" alt="Floral arrangement" class="design__img design__img-1">
                     </div>
                     <div class="design__copy-box">
                         <div class="design__copy">
-                            <div class="copy-border copy-border-top">&nbsp;</div>
-                            <div class="copy-border copy-border-bottom">&nbsp;</div>
-                            <div class="copy-border copy-border-left">&nbsp;</div>
-                            <div class="copy-border copy-border-right">&nbsp;</div>
+                            <div class="frame frame-top">&nbsp;</div>
+                            <div class="frame frame-bottom">&nbsp;</div>
+                            <div class="frame frame-left">&nbsp;</div>
+                            <div class="frame frame-right">&nbsp;</div>
                             <p class="design__paragraph paragraph">La manera de proyectar es mediante un encuentro consistente y filosófico con la obra, no un estilo predeterminado.</p>
                             <p class="design__paragraph paragraph">Nuestras obras están íntimamente conectadas a su contexto y función. </p>
                             <p class="design__paragraph paragraph">El resultado es una síntesis de concepto, integración de lo funcional y belleza.</p>
@@ -200,10 +179,10 @@
                         <div class="services__card-title">
                             <div class="services__background services__background--1">
                                 <h4 class="heading--forth">Concepción</h4>
-                                <div class="copy-border copy-border-top">&nbsp;</div>
-                                <div class="copy-border copy-border-bottom">&nbsp;</div>
-                                <div class="copy-border copy-border-left">&nbsp;</div>
-                                <div class="copy-border copy-border-right">&nbsp;</div>
+                                <div class="frame frame-top">&nbsp;</div>
+                                <div class="frame frame-bottom">&nbsp;</div>
+                                <div class="frame frame-left">&nbsp;</div>
+                                <div class="frame frame-right">&nbsp;</div>
                                 <div class="services__background-overlay">&nbsp;</div>
                             </div>
                         </div>
@@ -220,10 +199,10 @@
                         <div class="services__card-title">
                             <div class="services__background services__background--2">
                                 <h4 class="heading--forth">Realización</h4>
-                                <div class="copy-border copy-border-top">&nbsp;</div>
-                                <div class="copy-border copy-border-bottom">&nbsp;</div>
-                                <div class="copy-border copy-border-left">&nbsp;</div>
-                                <div class="copy-border copy-border-right">&nbsp;</div>
+                                <div class="frame frame-top">&nbsp;</div>
+                                <div class="frame frame-bottom">&nbsp;</div>
+                                <div class="frame frame-left">&nbsp;</div>
+                                <div class="frame frame-right">&nbsp;</div>
                                 <div class="services__background-overlay">&nbsp;</div>
                             </div>
                         </div>
@@ -240,10 +219,10 @@
                         <div class="services__card-title">
                             <div class="services__background services__background--3">
                                 <h4 class="heading--forth">Mantenimiento</h4>
-                                <div class="copy-border copy-border-top">&nbsp;</div>
-                                <div class="copy-border copy-border-bottom">&nbsp;</div>
-                                <div class="copy-border copy-border-left">&nbsp;</div>
-                                <div class="copy-border copy-border-right">&nbsp;</div>
+                                <div class="frame frame-top">&nbsp;</div>
+                                <div class="frame frame-bottom">&nbsp;</div>
+                                <div class="frame frame-left">&nbsp;</div>
+                                <div class="frame frame-right">&nbsp;</div>
                                 <div class="services__background-overlay">&nbsp;</div>
                             </div>
                         </div>
@@ -265,65 +244,53 @@
                     <h3 class="heading--tertiary">See some examples of my work in the gallery below.</h3>
                 </div>
                 <div class="portfolio__gallery gallery">
-
                     <div class="gallery__album">
-                        <img src="css/img/album-1--1.jpg" alt="" class="gallery__img gallery__img--1">  
+                        <img src="img/album-1--1.jpg" alt="album one" class="gallery__img gallery__img--1">  
                         <div class="gallery__overlay gallery__overlay--1"><a href="#album--1" class="gallery__link"><i class="fal fa-external-link gallery__icon"></i></a></div>
-                    </div>
-                    
+                    </div> 
                     <div class="gallery__album">
-                        <img src="css/img/album-2--1.jpg" alt="" class="gallery__img gallery__img--2">  
+                        <img src="img/album-2--1.jpg" alt="album two" class="gallery__img gallery__img--2">  
                         <div class="gallery__overlay gallery__overlay--2"><a href="#album--2" class="gallery__link"><i class="fal fa-external-link gallery__icon"></i></a></div>
                     </div>
-                    
                     <div class="gallery__album">
-                        <img src="css/img/album-3--1.jpg" alt="" class="gallery__img gallery__img--3">   
+                        <img src="img/album-3--1.jpg" alt="album three" class="gallery__img gallery__img--3">   
                         <div class="gallery__overlay gallery__overlay--3"><a href="#album--3" class="gallery__link"><i class="fal fa-external-link gallery__icon"></i></a></div>
                     </div>
-                    
                     <div class="gallery__album">
-                        <img src="css/img/album-4--1.jpg" alt="" class="gallery__img gallery__img--4">  
+                        <img src="img/album-4--1.jpg" alt="album four" class="gallery__img gallery__img--4">  
                         <div class="gallery__overlay gallery__overlay--4"><a href="#album--4" class="gallery__link"><i class="fal fa-external-link gallery__icon"></i></a></div>
                     </div>
-                    
                     <div class="gallery__album">
-                        <img src="css/img/album-5--1.jpg" alt="" class="gallery__img gallery__img--5">  
+                        <img src="img/album-5--1.jpg" alt="album five" class="gallery__img gallery__img--5">  
                         <div class="gallery__overlay gallery__overlay--5"><a href="#album--5" class="gallery__link"><i class="fal fa-external-link gallery__icon"></i></a></div>
                     </div>
-                    
                     <div class="gallery__album">
-                        <img src="css/img/album-6--1.jpg" alt="" class="gallery__img gallery__img--6">  
+                        <img src="img/album-6--1.jpg" alt="album six" class="gallery__img gallery__img--6">  
                         <div class="gallery__overlay gallery__overlay--6"><a href="#album--6" class="gallery__link"><i class="fal fa-external-link gallery__icon"></i></a></div>
                     </div>
-                    
                     <div class="gallery__album">
-                        <img src="css/img/album-7--1.jpg" alt="" class="gallery__img gallery__img--7">
+                        <img src="img/album-7--1.jpg" alt="album seven" class="gallery__img gallery__img--7">
                         <div class="gallery__overlay gallery__overlay--7"><a href="#album--7" class="gallery__link"><i class="fal fa-external-link gallery__icon"></i></a></div>
                     </div>
-                    
                     <div class="gallery__album">
-                        <img src="css/img/album-8--1.jpg" alt="" class="gallery__img gallery__img--8">  
+                        <img src="img/album-8--1.jpg" alt="album eight" class="gallery__img gallery__img--8">  
                         <div class="gallery__overlay gallery__overlay--8"><a href="#album--8" class="gallery__link"><i class="fal fa-external-link gallery__icon"></i></a></div>
                     </div>
-                    
                     <div class="gallery__album">
-                        <img src="css/img/album-9--1.jpg" alt="" class="gallery__img gallery__img--9">  
+                        <img src="img/album-9--1.jpg" alt="album nine" class="gallery__img gallery__img--9">  
                         <div class="gallery__overlay gallery__overlay--9"><a href="#album--9" class="gallery__link"><i class="fal fa-external-link gallery__icon"></i></a></div>
                     </div>
-                    
                     <div class="gallery__album">
-                        <img src="css/img/album-10--1.jpg" alt="" class="gallery__img gallery__img--10">
+                        <img src="img/album-10--1.jpg" alt="album ten" class="gallery__img gallery__img--10">
                         <div class="gallery__overlay gallery__overlay--10"><a href="#album--10" class="gallery__link"><i class="fal fa-external-link gallery__icon"></i></a></div>
                     </div>
-                    
-
                 </div>
             </section>
 
             <section class="contact" id="contact">
                 <div class="contact__intro">
                     <h2 class="heading--secondary">Contact <span>Us</span></h2>
-                    <h3 class="heading--tertiary">Please don't hesitate to get in contact if you'd like to know more about my work or if you'd like some advice about a project of your own.</h4>
+                    <h3 class="heading--tertiary">Please don't hesitate to get in contact if you'd like to know more about my work or if you'd like some advice about a project of your own.</h3>
                 </div>
                 <div class="social contact__social">
                     <ul class="social__list">
@@ -349,7 +316,6 @@
                         <div class="form__group form__group--message">
                             <label for="message">Message *</label>
                             <textarea id="message" name="name" class="form__message" placeholder="Message *" required></textarea>
-                            <!-- <input type="textarea" name="message" id="message" class="form__message" placeholder="Message *"> -->
                         </div>
                         <div class="form__group form__group--submit">
                             <label for="submit">&nbsp;</label>
@@ -363,20 +329,17 @@
             <footer class="footer">
                 <div class="footer__container">
                     <div class="footer__logo-box">
-                            <img src="css/img/footer_logo2.png" class="footer__logo logo">
+                            <img src="img/footer_logo2.png" alt="logo" class="footer__logo logo">
                     </div>
-                   
                     <a href="#" class="footer__top-link"><p><span class="footer__arrow">&uarr;</span>Top of page</p></a>
-                    
                     <p class="footer__copyright">&copy; Bettina Marten 2019</p>
                     <p class="footer__author">By RoRo</p>
                 </div>
-                
             </footer> 
 
         </div>
 
-        <!-- ***************** ANNEX -- POP-UP ALBUMS ***************** -->
+        <!-- ***************** ANNEX - POP-UP ALBUMS ***************** -->
 
         <!-- POP-UP ALBUM - PROJECT ONE -->
         <div class="album album-1" id="album--1">
@@ -384,47 +347,48 @@
                 <a href="#gallery" class="album__close">&times;</a>
 
                 <input id="img--1" type="radio" name="img-select" class="album__radio album__radio--1" checked="checked">
-                <label for="img--1" class="album__thumbnail album__thumbnail-1"><img src="css/img/album-1--1.jpg" alt="" class="album__img--small album__img--small-1"></label>
+                <label for="img--1" class="album__thumbnail album__thumbnail-1"><img src="img/album-1--1.jpg" alt="album one, image one" class="album__img--small album__img--small-1"></label>
 
                 <input id="img--2" type="radio" name="img-select" class="album__radio album__radio--2">
-                <label for="img--2" class="album__thumbnail album__thumbnail-2"><img src="css/img/album-1--2.jpg" alt="" class="album__img--small album__img--small-2"></label>
+                <label for="img--2" class="album__thumbnail album__thumbnail-2"><img src="img/album-1--2.jpg" alt="album one, image two" class="album__img--small album__img--small-2"></label>
 
                 <input id="img--3" type="radio" name="img-select" class="album__radio album__radio--3">
-                <label for="img--3" class="album__thumbnail album__thumbnail-3"><img src="css/img/album-1--3.jpg" alt="" class="album__img--small album__img--small-3"></label>
+                <label for="img--3" class="album__thumbnail album__thumbnail-3"><img src="img/album-1--3.jpg" alt="album three, image three" class="album__img--small album__img--small-3"></label>
 
                 <div class="album__display">
-                    <img src="css/img/album-1--1.jpg" alt="" class="album__img album__img--1">
-                    <img src="css/img/album-1--2.jpg" alt="" class="album__img album__img--2">
-                    <img src="css/img/album-1--3.jpg" alt="" class="album__img album__img--3">
+                    <img src="img/album-1--1.jpg" alt="album one, image one" class="album__img album__img--1">
+                    <img src="img/album-1--2.jpg" alt="album one, image two" class="album__img album__img--2">
+                    <img src="img/album-1--3.jpg" alt="album one, image three" class="album__img album__img--3">
                 </div>
             </div>
         </div>
-        <!-- POP-UP ALBUM - PROJECT TWO - extra groups must have different values for 'id', 'for' and 'name' that are different to those of the previous group -->
+
+        <!-- POP-UP ALBUM - PROJECT TWO - extra groups must have different values for 'id', 'for' and 'name' that are different to those of the previous group in order for the radio button hack to work-->
         <div class="album album-2" id="album--2">
             <div class="album__bg">
                 <a href="#gallery" class="album__close">&times;</a>
 
                 <input id="grp-2-img--1" type="radio" name="grp-2-img-select" class="album__radio album__radio--1" checked="checked">
-                <label for="grp-2-img--1" class="album__thumbnail album__thumbnail-1"><img src="css/img/album-2--1.jpg" alt="" class="album__img--small album__img--small-1"></label>
+                <label for="grp-2-img--1" class="album__thumbnail album__thumbnail-1"><img src="img/album-2--1.jpg" alt="album two, image one" class="album__img--small album__img--small-1"></label>
 
                 <input id="grp-2-img--2" type="radio" name="grp-2-img-select" class="album__radio album__radio--2">
-                <label for="grp-2-img--2" class="album__thumbnail album__thumbnail-2"><img src="css/img/album-2--2.jpg" alt="" class="album__img--small album__img--small-2"></label>
+                <label for="grp-2-img--2" class="album__thumbnail album__thumbnail-2"><img src="img/album-2--2.jpg" alt="album two, image two" class="album__img--small album__img--small-2"></label>
 
                 <input id="grp-2-img--3" type="radio" name="grp-2-img-select" class="album__radio album__radio--3">
-                <label for="grp-2-img--3" class="album__thumbnail album__thumbnail-3"><img src="css/img/album-2--3.jpg" alt="" class="album__img--small album__img--small-3"></label>
+                <label for="grp-2-img--3" class="album__thumbnail album__thumbnail-3"><img src="img/album-2--3.jpg" alt="album two, image three" class="album__img--small album__img--small-3"></label>
 
                 <input id="grp-2-img--4" type="radio" name="grp-2-img-select" class="album__radio album__radio--4">
-                <label for="grp-2-img--4" class="album__thumbnail album__thumbnail-4"><img src="css/img/album-2--4.jpg" alt="" class="album__img--small album__img--small-4"></label>
+                <label for="grp-2-img--4" class="album__thumbnail album__thumbnail-4"><img src="img/album-2--4.jpg" alt="album two, image four" class="album__img--small album__img--small-4"></label>
 
                 <input id="grp-2-img--5" type="radio" name="grp-2-img-select" class="album__radio album__radio--5">
-                <label for="grp-2-img--5" class="album__thumbnail album__thumbnail-5"><img src="css/img/album-2--5.jpg" alt="" class="album__img--small album__img--small-5"></label>
+                <label for="grp-2-img--5" class="album__thumbnail album__thumbnail-5"><img src="img/album-2--5.jpg" alt="album two, image five" class="album__img--small album__img--small-5"></label>
 
                 <div class="album__display">
-                    <img src="css/img/album-2--1.jpg" alt="" class="album__img album__img--1">
-                    <img src="css/img/album-2--2.jpg" alt="" class="album__img album__img--2">
-                    <img src="css/img/album-2--3.jpg" alt="" class="album__img album__img--3">
-                    <img src="css/img/album-2--4.jpg" alt="" class="album__img album__img--4">
-                    <img src="css/img/album-2--5.jpg" alt="" class="album__img album__img--5">
+                    <img src="img/album-2--1.jpg" alt="album two, image one" class="album__img album__img--1">
+                    <img src="img/album-2--2.jpg" alt="album two, image two" class="album__img album__img--2">
+                    <img src="img/album-2--3.jpg" alt="album two, image three" class="album__img album__img--3">
+                    <img src="img/album-2--4.jpg" alt="album two, image four" class="album__img album__img--4">
+                    <img src="img/album-2--5.jpg" alt="album two, image five" class="album__img album__img--5">
                 </div>
             </div>
         </div>  
@@ -435,14 +399,14 @@
                 <a href="#gallery" class="album__close">&times;</a>
 
                 <input id="grp-3-img--1" type="radio" name="grp-3-img-select" class="album__radio album__radio--1" checked="checked">
-                <label for="grp-3-img--1" class="album__thumbnail album__thumbnail-1"><img src="css/img/album-3--1.jpg" alt="" class="album__img--small album__img--small-1"></label>
+                <label for="grp-3-img--1" class="album__thumbnail album__thumbnail-1"><img src="img/album-3--1.jpg" alt="album three, image one" class="album__img--small album__img--small-1"></label>
 
                 <input id="grp-3-img--2" type="radio" name="grp-3-img-select" class="album__radio album__radio--2">
-                <label for="grp-3-img--2" class="album__thumbnail album__thumbnail-2"><img src="css/img/album-3--2.jpg" alt="" class="album__img--small album__img--small-2"></label>
+                <label for="grp-3-img--2" class="album__thumbnail album__thumbnail-2"><img src="img/album-3--2.jpg" alt="album three, image two" class="album__img--small album__img--small-2"></label>
 
                 <div class="album__display">
-                    <img src="css/img/album-3--1.jpg" alt="" class="album__img album__img--1">
-                    <img src="css/img/album-3--2.jpg" alt="" class="album__img album__img--2">
+                    <img src="img/album-3--1.jpg" alt="album three, image one" class="album__img album__img--1">
+                    <img src="img/album-3--2.jpg" alt="album three, image two" class="album__img album__img--2">
                 </div>
             </div>
         </div>  
@@ -453,14 +417,14 @@
                 <a href="#gallery" class="album__close">&times;</a>
 
                 <input id="grp-4-img--1" type="radio" name="grp-4-img-select" class="album__radio album__radio--1" checked="checked">
-                <label for="grp-4-img--1" class="album__thumbnail album__thumbnail-1"><img src="css/img/album-4--1.jpg" alt="" class="album__img--small album__img--small-1"></label>
+                <label for="grp-4-img--1" class="album__thumbnail album__thumbnail-1"><img src="img/album-4--1.jpg" alt="album four, image one" class="album__img--small album__img--small-1"></label>
 
                 <input id="grp-4-img--2" type="radio" name="grp-4-img-select" class="album__radio album__radio--2">
-                <label for="grp-4-img--2" class="album__thumbnail album__thumbnail-2"><img src="css/img/album-4--2.jpg" alt="" class="album__img--small album__img--small-2"></label>
+                <label for="grp-4-img--2" class="album__thumbnail album__thumbnail-2"><img src="img/album-4--2.jpg" alt="album four, image two" class="album__img--small album__img--small-2"></label>
 
                 <div class="album__display">
-                    <img src="css/img/album-4--1.jpg" alt="" class="album__img album__img--1">
-                    <img src="css/img/album-4--2.jpg" alt="" class="album__img album__img--2">
+                    <img src="img/album-4--1.jpg" alt="album four, image one" class="album__img album__img--1">
+                    <img src="img/album-4--2.jpg" alt="album four, image two" class="album__img album__img--2">
                 </div>
             </div>
         </div>  
@@ -471,14 +435,14 @@
                 <a href="#gallery" class="album__close">&times;</a>
 
                 <input id="grp-5-img--1" type="radio" name="grp-5-img-select" class="album__radio album__radio--1" checked="checked">
-                <label for="grp-5-img--1" class="album__thumbnail album__thumbnail-1"><img src="css/img/album-5--1.jpg" alt="" class="album__img--small album__img--small-1"></label>
+                <label for="grp-5-img--1" class="album__thumbnail album__thumbnail-1"><img src="img/album-5--1.jpg" alt="album five, image one" class="album__img--small album__img--small-1"></label>
 
                 <input id="grp-5-img--2" type="radio" name="grp-5-img-select" class="album__radio album__radio--2">
-                <label for="grp-5-img--2" class="album__thumbnail album__thumbnail-2"><img src="css/img/album-5--2.jpg" alt="" class="album__img--small album__img--small-2"></label>
+                <label for="grp-5-img--2" class="album__thumbnail album__thumbnail-2"><img src="img/album-5--2.jpg" alt="album five, image two" class="album__img--small album__img--small-2"></label>
 
                 <div class="album__display">
-                    <img src="css/img/album-5--1.jpg" alt="" class="album__img album__img--1">
-                    <img src="css/img/album-5--2.jpg" alt="" class="album__img album__img--2">
+                    <img src="img/album-5--1.jpg" alt="album five, image one" class="album__img album__img--1">
+                    <img src="img/album-5--2.jpg" alt="album five, image two" class="album__img album__img--2">
                 </div>
             </div>
         </div> 
@@ -489,22 +453,22 @@
                 <a href="#gallery" class="album__close">&times;</a>
 
                 <input id="grp-6-img--1" type="radio" name="grp-6-img-select" class="album__radio album__radio--1" checked="checked">
-                <label for="grp-6-img--1" class="album__thumbnail album__thumbnail-1"><img src="css/img/album-6--1.jpg" alt="" class="album__img--small album__img--small-1"></label>
+                <label for="grp-6-img--1" class="album__thumbnail album__thumbnail-1"><img src="img/album-6--1.jpg" alt="album six, image one" class="album__img--small album__img--small-1"></label>
 
                 <input id="grp-6-img--2" type="radio" name="grp-6-img-select" class="album__radio album__radio--2">
-                <label for="grp-6-img--2" class="album__thumbnail album__thumbnail-2"><img src="css/img/album-6--2.jpg" alt="" class="album__img--small album__img--small-2"></label>
+                <label for="grp-6-img--2" class="album__thumbnail album__thumbnail-2"><img src="img/album-6--2.jpg" alt="album six, image two" class="album__img--small album__img--small-2"></label>
 
                 <input id="grp-6-img--3" type="radio" name="grp-6-img-select" class="album__radio album__radio--3">
-                <label for="grp-6-img--3" class="album__thumbnail album__thumbnail-3"><img src="css/img/album-6--3.jpg" alt="" class="album__img--small album__img--small-3"></label>
+                <label for="grp-6-img--3" class="album__thumbnail album__thumbnail-3"><img src="img/album-6--3.jpg" alt="album six, image three" class="album__img--small album__img--small-3"></label>
 
                 <input id="grp-6-img--4" type="radio" name="grp-6-img-select" class="album__radio album__radio--4">
-                <label for="grp-6-img--4" class="album__thumbnail album__thumbnail-4"><img src="css/img/album-6--4.jpg" alt="" class="album__img--small album__img--small-4"></label>
+                <label for="grp-6-img--4" class="album__thumbnail album__thumbnail-4"><img src="img/album-6--4.jpg" alt="album six, image four" class="album__img--small album__img--small-4"></label>
 
                 <div class="album__display">
-                    <img src="css/img/album-6--1.jpg" alt="" class="album__img album__img--1">
-                    <img src="css/img/album-6--2.jpg" alt="" class="album__img album__img--2">
-                    <img src="css/img/album-6--3.jpg" alt="" class="album__img album__img--3">
-                    <img src="css/img/album-6--4.jpg" alt="" class="album__img album__img--4">
+                    <img src="img/album-6--1.jpg" alt="album six, image one" class="album__img album__img--1">
+                    <img src="img/album-6--2.jpg" alt="album six, image two" class="album__img album__img--2">
+                    <img src="img/album-6--3.jpg" alt="album six, image three" class="album__img album__img--3">
+                    <img src="img/album-6--4.jpg" alt="album six, image four" class="album__img album__img--4">
                 </div>
             </div>
         </div>  
@@ -515,26 +479,26 @@
                     <a href="#gallery" class="album__close">&times;</a>
     
                     <input id="grp-7-img--1" type="radio" name="grp-7-img-select" class="album__radio album__radio--1" checked="checked">
-                    <label for="grp-7-img--1" class="album__thumbnail album__thumbnail-1"><img src="css/img/album-7--1.jpg" alt="" class="album__img--small album__img--small-1"></label>
+                    <label for="grp-7-img--1" class="album__thumbnail album__thumbnail-1"><img src="img/album-7--1.jpg" alt="album seven, image one" class="album__img--small album__img--small-1"></label>
     
                     <input id="grp-7-img--2" type="radio" name="grp-7-img-select" class="album__radio album__radio--2">
-                    <label for="grp-7-img--2" class="album__thumbnail album__thumbnail-2"><img src="css/img/album-7--2.jpg" alt="" class="album__img--small album__img--small-2"></label>
+                    <label for="grp-7-img--2" class="album__thumbnail album__thumbnail-2"><img src="img/album-7--2.jpg" alt="album seven, image two" class="album__img--small album__img--small-2"></label>
     
                     <input id="grp-7-img--3" type="radio" name="grp-7-img-select" class="album__radio album__radio--3">
-                    <label for="grp-7-img--3" class="album__thumbnail album__thumbnail-3"><img src="css/img/album-7--3.jpg" alt="" class="album__img--small album__img--small-3"></label>
+                    <label for="grp-7-img--3" class="album__thumbnail album__thumbnail-3"><img src="img/album-7--3.jpg" alt="album seven, image three" class="album__img--small album__img--small-3"></label>
     
                     <input id="grp-7-img--4" type="radio" name="grp-7-img-select" class="album__radio album__radio--4">
-                    <label for="grp-7-img--4" class="album__thumbnail album__thumbnail-4"><img src="css/img/album-7--4.jpg" alt="" class="album__img--small album__img--small-4"></label>
+                    <label for="grp-7-img--4" class="album__thumbnail album__thumbnail-4"><img src="img/album-7--4.jpg" alt="album seven, image four" class="album__img--small album__img--small-4"></label>
 
                     <input id="grp-7-img--5" type="radio" name="grp-7-img-select" class="album__radio album__radio--5">
-                    <label for="grp-7-img--5" class="album__thumbnail album__thumbnail-5"><img src="css/img/album-7--5.jpg" alt="" class="album__img--small album__img--small-5"></label>
+                    <label for="grp-7-img--5" class="album__thumbnail album__thumbnail-5"><img src="img/album-7--5.jpg" alt="album seven, image five" class="album__img--small album__img--small-5"></label>
     
                     <div class="album__display">
-                        <img src="css/img/album-7--1.jpg" alt="" class="album__img album__img--1">
-                        <img src="css/img/album-7--2.jpg" alt="" class="album__img album__img--2">
-                        <img src="css/img/album-7--3.jpg" alt="" class="album__img album__img--3">
-                        <img src="css/img/album-7--4.jpg" alt="" class="album__img album__img--4">
-                        <img src="css/img/album-7--5.jpg" alt="" class="album__img album__img--5">
+                        <img src="img/album-7--1.jpg" alt="album seven, image one" class="album__img album__img--1">
+                        <img src="img/album-7--2.jpg" alt="album seven, image two" class="album__img album__img--2">
+                        <img src="img/album-7--3.jpg" alt="album seven, image three" class="album__img album__img--3">
+                        <img src="img/album-7--4.jpg" alt="album seven, image four" class="album__img album__img--4">
+                        <img src="img/album-7--5.jpg" alt="album seven, image five" class="album__img album__img--5">
                     </div>
                 </div>
             </div>  
@@ -545,18 +509,18 @@
                     <a href="#gallery" class="album__close">&times;</a>
     
                     <input id="grp-8-img--1" type="radio" name="grp-8-img-select" class="album__radio album__radio--1" checked="checked">
-                    <label for="grp-8-img--1" class="album__thumbnail album__thumbnail-1"><img src="css/img/album-8--1.jpg" alt="" class="album__img--small album__img--small-1"></label>
+                    <label for="grp-8-img--1" class="album__thumbnail album__thumbnail-1"><img src="img/album-8--1.jpg" alt="album eight, image one" class="album__img--small album__img--small-1"></label>
     
                     <input id="grp-8-img--2" type="radio" name="grp-8-img-select" class="album__radio album__radio--2">
-                    <label for="grp-8-img--2" class="album__thumbnail album__thumbnail-2"><img src="css/img/album-8--2.jpg" alt="" class="album__img--small album__img--small-2"></label>
+                    <label for="grp-8-img--2" class="album__thumbnail album__thumbnail-2"><img src="img/album-8--2.jpg" alt="album eight, image two" class="album__img--small album__img--small-2"></label>
     
                     <input id="grp-8-img--3" type="radio" name="grp-8-img-select" class="album__radio album__radio--3">
-                    <label for="grp-8-img--3" class="album__thumbnail album__thumbnail-3"><img src="css/img/album-8--3.jpg" alt="" class="album__img--small album__img--small-3"></label>
+                    <label for="grp-8-img--3" class="album__thumbnail album__thumbnail-3"><img src="img/album-8--3.jpg" alt="album eight, image three" class="album__img--small album__img--small-3"></label>
     
                     <div class="album__display">
-                        <img src="css/img/album-8--1.jpg" alt="" class="album__img album__img--1">
-                        <img src="css/img/album-8--2.jpg" alt="" class="album__img album__img--2">
-                        <img src="css/img/album-8--3.jpg" alt="" class="album__img album__img--3">
+                        <img src="img/album-8--1.jpg" alt="album eight, image one" class="album__img album__img--1">
+                        <img src="img/album-8--2.jpg" alt="album eight, image two" class="album__img album__img--2">
+                        <img src="img/album-8--3.jpg" alt="album eight, image three" class="album__img album__img--3">
                     </div>
                 </div>
             </div>
@@ -567,30 +531,26 @@
                 <a href="#gallery" class="album__close">&times;</a>
 
                 <input id="grp-9-img--1" type="radio" name="grp-9-img-select" class="album__radio album__radio--1" checked="checked">
-                <label for="grp-9-img--1" class="album__thumbnail album__thumbnail-1"><img src="css/img/album-9--1.jpg" alt="" class="album__img--small album__img--small-1"></label>
+                <label for="grp-9-img--1" class="album__thumbnail album__thumbnail-1"><img src="img/album-9--1.jpg" alt="album nine, image one" class="album__img--small album__img--small-1"></label>
 
                 <input id="grp-9-img--2" type="radio" name="grp-9-img-select" class="album__radio album__radio--2">
-                <label for="grp-9-img--2" class="album__thumbnail album__thumbnail-2"><img src="css/img/album-9--2.jpg" alt="" class="album__img--small album__img--small-2"></label>
+                <label for="grp-9-img--2" class="album__thumbnail album__thumbnail-2"><img src="img/album-9--2.jpg" alt="album nine, image two" class="album__img--small album__img--small-2"></label>
 
                 <input id="grp-9-img--3" type="radio" name="grp-9-img-select" class="album__radio album__radio--3">
-                <label for="grp-9-img--3" class="album__thumbnail album__thumbnail-3"><img src="css/img/album-9--3.jpg" alt="" class="album__img--small album__img--small-3"></label>
+                <label for="grp-9-img--3" class="album__thumbnail album__thumbnail-3"><img src="img/album-9--3.jpg" alt="album nine, image three" class="album__img--small album__img--small-3"></label>
 
                 <input id="grp-9-img--4" type="radio" name="grp-9-img-select" class="album__radio album__radio--4">
-                <label for="grp-9-img--4" class="album__thumbnail album__thumbnail-4"><img src="css/img/album-9--4.jpg" alt="" class="album__img--small album__img--small-4"></label>
+                <label for="grp-9-img--4" class="album__thumbnail album__thumbnail-4"><img src="img/album-9--4.jpg" alt="album nine, image four" class="album__img--small album__img--small-4"></label>
 
                 <input id="grp-9-img--5" type="radio" name="grp-9-img-select" class="album__radio album__radio--5">
-                <label for="grp-9-img--5" class="album__thumbnail album__thumbnail-5"><img src="css/img/album-9--5.jpg" alt="" class="album__img--small album__img--small-5"></label>
-
-                <!-- <input id="grp-9-img--6" type="radio" name="grp-9-img-select" class="album__radio album__radio--6">
-                <label for="grp-9-img--6" class="album__thumbnail album__thumbnail-6"><img src="css/img/album-9--6.jpg" alt="" class="album__img--small album__img--small-6"></label> -->
+                <label for="grp-9-img--5" class="album__thumbnail album__thumbnail-5"><img src="img/album-9--5.jpg" alt="album nine, image five" class="album__img--small album__img--small-5"></label>
 
                 <div class="album__display">
-                    <img src="css/img/album-9--1.jpg" alt="" class="album__img album__img--1">
-                    <img src="css/img/album-9--2.jpg" alt="" class="album__img album__img--2">
-                    <img src="css/img/album-9--3.jpg" alt="" class="album__img album__img--3">
-                    <img src="css/img/album-9--4.jpg" alt="" class="album__img album__img--4">
-                    <img src="css/img/album-9--5.jpg" alt="" class="album__img album__img--5">
-                    <!-- <img src="css/img/album-9--6.jpg" alt="" class="album__img album__img--6"> -->
+                    <img src="img/album-9--1.jpg" alt="album nine, image one" class="album__img album__img--1">
+                    <img src="img/album-9--2.jpg" alt="album nine, image two" class="album__img album__img--2">
+                    <img src="img/album-9--3.jpg" alt="album nine, image three" class="album__img album__img--3">
+                    <img src="img/album-9--4.jpg" alt="album nine, image four" class="album__img album__img--4">
+                    <img src="img/album-9--5.jpg" alt="album nine, image five" class="album__img album__img--5">
                 </div>
             </div>
         </div>  
@@ -601,23 +561,23 @@
                 <a href="#gallery" class="album__close">&times;</a>
 
                 <input id="grp-10-img--1" type="radio" name="grp-10-img-select" class="album__radio album__radio--1" checked="checked">
-                <label for="grp-10-img--1" class="album__thumbnail album__thumbnail-1"><img src="css/img/album-10--1.jpg" alt="" class="album__img--small album__img--small-1"></label>
+                <label for="grp-10-img--1" class="album__thumbnail album__thumbnail-1"><img src="img/album-10--1.jpg" alt="album ten, image one" class="album__img--small album__img--small-1"></label>
 
                 <input id="grp-10-img--2" type="radio" name="grp-10-img-select" class="album__radio album__radio--2">
-                <label for="grp-10-img--2" class="album__thumbnail album__thumbnail-2"><img src="css/img/album-10--2.jpg" alt="" class="album__img--small album__img--small-2"></label>
+                <label for="grp-10-img--2" class="album__thumbnail album__thumbnail-2"><img src="img/album-10--2.jpg" alt="album ten, image two" class="album__img--small album__img--small-2"></label>
 
                 <input id="grp-10-img--3" type="radio" name="grp-10-img-select" class="album__radio album__radio--3">
-                <label for="grp-10-img--3" class="album__thumbnail album__thumbnail-3"><img src="css/img/album-10--3.jpg" alt="" class="album__img--small album__img--small-3"></label>
+                <label for="grp-10-img--3" class="album__thumbnail album__thumbnail-3"><img src="img/album-10--3.jpg" alt="album ten, image three" class="album__img--small album__img--small-3"></label>
 
                 <div class="album__display">
-                    <img src="css/img/album-10--1.jpg" alt="" class="album__img album__img--1">
-                    <img src="css/img/album-10--2.jpg" alt="" class="album__img album__img--2">
-                    <img src="css/img/album-10--3.jpg" alt="" class="album__img album__img--3">
+                    <img src="img/album-10--1.jpg" alt="album ten, image one" class="album__img album__img--1">
+                    <img src="img/album-10--2.jpg" alt="album ten, image two" class="album__img album__img--2">
+                    <img src="img/album-10--3.jpg" alt="album ten, image three" class="album__img album__img--3">
                 </div>
             </div>
         </div>
 
-        <script type="text/javascript" src="js/scripts.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
 
 </html>

@@ -37,17 +37,10 @@
     	grid-row: 2 / span 1;
     	grid-column: 2 / span 1;
 		margin: 0 auto;
-
-    	// display: grid;
-    	// grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));
-    	// grid-auto-flow: column;
-    	// justify-items: center;
-    	// column-gap: 5rem;
-
+		// Again using flexbox to let the cards wrap onto new row on smaller screens
     	display: flex;
     	flex-wrap: wrap;
     	justify-content: center;
-
     }
 
     &__card {
@@ -57,7 +50,7 @@
 		border: 1px solid rgba($color-black, .3);
 		box-shadow: 0 10px 6px -10px rgba($color-black, .5);
 		margin: 2rem;
-
+		// A mini grid to organise card content - flexbox would have worked just as well
 		display: grid;
 		grid-template-rows: 1.5fr 2fr;
 
@@ -94,18 +87,18 @@
         align-items: center;
 
     	&--1 {
-			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(img/services-1.jpg);
+			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(../img/services-1.jpg);
     	}
 
     	&--2 {
-			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(img/services-2b.jpg);
+			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(../img/services-2b.jpg);
     	}
 
     	&--3 {
-			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(img/services-3b.jpg);
+			background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(../img/services-3b.jpg);
     	}
 
-    	& .copy-border {
+    	& .frame {
 	            background-color: rgba($color-white, .2);
 	            position: absolute;
 	            z-index: 3;
@@ -116,28 +109,28 @@
 			    }
 	        }
         
-	    & .copy-border-top {
+	    & .frame-top {
 	            height: 1px;
 	            top: 35%;
 	            left: 17%;
 	            right: 17%;
 	        }
 
-	    & .copy-border-bottom {
+	    & .frame-bottom {
 	            height: 1px;
 	            bottom: 35%;
 	            left: 17%;
 	            right: 17%;
 	        }
 
-	    & .copy-border-left {
+	    & .frame-left {
 	            width: 1px;
 	            top: 31%;
 	            bottom: 31%;
 	            left: 20%;
 	        }
 
-	    & .copy-border-right {
+	    & .frame-right {
 	            width: 1px;
 	            top: 31%;
 	            bottom: 31%;
@@ -156,7 +149,7 @@
 	  		transition: all .3s;
 
 	  		@media only screen and (max-width: 75em) {
-		        opacity: 1;
+		        opacity: .5;
 		    }
 	  	}
 
@@ -168,7 +161,7 @@
 	  		color: $color-white;
 	  	}
 
-	  	&:hover .copy-border {
+	  	&:hover .frame {
 	  		background-color: rgba($color-white, .6);
 	  	}
 
@@ -222,6 +215,7 @@
 		}
 
 		&:active {
+			// Creates the button press effect
 			transform: translateY(1px);
 			box-shadow: 0 5px 3px -10px rgba($color-black, .5);
 		}

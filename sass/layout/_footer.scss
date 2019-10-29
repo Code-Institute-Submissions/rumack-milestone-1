@@ -6,13 +6,12 @@
         width: 100%;
         background-color: $color-black;
         color: $color-white;
-
+        // A small grid to distribute content across rows and columns
         display: grid;
         grid-template-rows: repeat(5, 1fr);
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         align-items: end;
-        //padding: 2rem;
     }
 
     &__logo-box {
@@ -20,7 +19,6 @@
         grid-row: 3 / span 1;
         width: 25rem;
         align-self: start;
-
 
         display: flex;
         justify-content: center;
@@ -61,7 +59,6 @@
         font-weight: 300;
         color: $color-white;
         cursor: pointer;
-        margin-bottom: 1rem;
         backface-visibility: hidden;
 
         &:hover .footer__arrow {
@@ -76,6 +73,7 @@
         font-size: 2rem;
         color: $color-white;
         transition: all .2s;
+        // Seems to remove a noticeable jump at the end of the transition
         backface-visibility: hidden;
     }
 

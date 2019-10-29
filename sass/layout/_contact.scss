@@ -1,9 +1,6 @@
 .contact {
-    //background-color: rgba($color-grey, .05);
-    
-
     display: grid;
-    grid-template-columns: minmax(4rem, 1fr) 10fr minmax(4rem, 1fr);
+    grid-template-columns: minmax(4rem, 1fr) 10fr minmax(4rem, 1fr); // One central column and two buffer margins
     grid-template-rows: repeat(3, auto);
     justify-items: center;
     row-gap: 4rem;
@@ -129,7 +126,7 @@
 
                 }
             }
-
+            // Placing of the form elements on the grid
             &__group--name {
                 grid-column: 1 / span 1;
                 grid-row: 1 / span 1;

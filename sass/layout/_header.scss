@@ -5,24 +5,29 @@
     display: grid;
     grid-template-columns: minmax(5rem, .5fr) 10fr minmax(5rem, .5fr);
     grid-template-rows: 1fr;
+    // This solved a scrolling problem, stops content visibly spilling outside window
     overflow: hidden;
     position: relative;
 
     &__bg {
         width: 100%;
         height: 100%;
-        background-image: radial-gradient(rgba($color-white, .9), rgba($color-white, .4)), url(img/img-header-flipped.jpg);
+        // Using a radial gradient here to allow a whiter center of the image where the logo sits
+        background-image: radial-gradient(rgba($color-white, .9), rgba($color-white, .4)), url(../img/img-header.jpg);
         background-size: cover;
         background-position: center left;
         background-attachment: fixed;
         grid-column: 1 / -1;
         grid-row: 1 / -1;
+        // The delay animation allows the user to focus on the animated logo, then eases them into the full page
         animation: fade-in 1.5s linear 2.5s forwards;
         opacity: 0;
         z-index: -1;
 
         @media only screen and (max-width: 56.25em) {
             background-position: center;
+            // Smaller screen, and much smaller image
+            background-image: radial-gradient(rgba($color-white, .9), rgba($color-white, .4)), url(../img/img-header--tab-mob.jpg);
         }
     }
 
@@ -43,8 +48,6 @@
         @media only screen and (max-width: 56.25em) {
             display: none;
         }
-
-       
 
         &-list {
             height: 100%;
@@ -88,9 +91,9 @@
         font-size: 1.6rem;
     }
 
+    // An alternative mobile navigation with icons
     &__nav--mob {
         display: none;
-
         position: fixed;
         top: 0;
         left: 0;
@@ -123,7 +126,14 @@
         &-link:visited {
             text-decoration: none;
             font-size: 3rem;
-            color: $color-black;
+            color: rgba($color-black, .5);
+            font-weight: 100;
+            transition: all .3s;
+
+            &:hover,
+            &:active {
+                color: rgba($color-black, .8);
+            }
         }
     }
 
@@ -297,6 +307,7 @@
         justify-self: center;
         align-self: end;
         margin-bottom: 6rem;
+        
         animation: pulse 2.5s ease-out 2.5s infinite; 
     }
 

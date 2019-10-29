@@ -1,6 +1,6 @@
 // KEYFRAMES
 
-// Keyframe animation for background image and nav bar
+// Keyframe animation for background image 
 
 @keyframes bg-fade-in {
     0% {
@@ -13,6 +13,8 @@
     }
 }
 
+// A reusable fade-in animation
+
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -21,6 +23,8 @@
         opacity: 1;
     }
 }
+
+// Animation for the pulsing arrow in header
 
 @keyframes pulse {
     0% {
@@ -36,31 +40,7 @@
     }
 }
 
-@keyframes animateBorder {
-    0% {
-        border: 1px solid transparent;
-    }
-    15% {
-        border: 1px solid $color-white;
-    }
-    30% {
-        border: 1px solid transparent;
-    }
-    45% {
-        border: 1px solid $color-white;
-    }
-    60% {
-        border: 1px solid transparent;
-    }
-    75% {
-        border: 1px solid $color-white;
-    }
-    90% {
-        border: 1px solid transparent;
-    }
-}
-
-// Keyframes for each individual letter path with stroke-dashoffset setting
+// Keyframes for each individual letter path of the logo SVG, with stroke-dashoffset setting
 
 // Keyframes for 'bettina marten' - through mixins in "abstracts/_mixins"
 @include path-animation-speed-1(write-1, 398, $color-black); 
