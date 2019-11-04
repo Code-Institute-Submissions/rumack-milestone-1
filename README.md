@@ -71,7 +71,7 @@ Some content has been provided by the client, but I’m still waiting for most o
 
 ### Acknowledgements
 
-All code is my own, although I’d like to acknowledge the CI instructors for some of my coding ideas here. I’d also like to acknowledge [Jonas Schmedtmann](http://codingheroes.io/) – I learned a huge amount from his Advanced CSS and SASS course, and the various tips and tricks and I gleaned from his excellent course are put into practice in a range of different ways here.
+All code is my own, although I’d like to acknowledge the CI instructors for some of my coding ideas here. I’d also like to acknowledge [Jonas Schmedtmann](http://codingheroes.io/) – I learned a huge amount from his Advanced CSS and SASS course, and the various tips and tricks and I gleaned from his excellent course are put into practice in a range of different ways here. I learned the SVG animation techniques from an [article](https://jakearchibald.com/2013/animated-line-drawing-svg/) by Jake Archibald. 
 
 ### Licence
 
