@@ -16,13 +16,19 @@
         background-image: radial-gradient(rgba($color-white, .9), rgba($color-white, .4)), url(../img/img-header.jpg);
         background-size: cover;
         background-position: center left;
-        background-attachment: fixed;
+        // For background-attachment, see comment below
+        background-attachment: scroll;
         grid-column: 1 / -1;
         grid-row: 1 / -1;
         // The delay animation allows the user to focus on the animated logo, then eases them into the full page
         animation: fade-in 1.5s linear 2.5s forwards;
         opacity: 0;
         z-index: -1;
+
+        // 'background-attachment:fixed' was problematic on mobile versions of the principal browsers, so a '@supports' query was added here to choose the right setting for the user's browser. 
+        @supports (background-attachment: fixed) {
+            background-attachment: fixed;
+        }
 
         @media only screen and (max-width: 56.25em) {
             background-position: center;
